@@ -6,8 +6,8 @@ import hero_jpg from "@/images/concept/hero.jpg";
 import hero_webp from "@/images/concept/hero.webp";
 import expert_jpg from "@/images/concept/expert.jpg";
 import expert_webp from "@/images/concept/expert.webp";
-import build_jpg from "@/images/concept/build.jpg";
-import build_webp from "@/images/concept/build.webp";
+import brand_values_jpg from "@/images/concept/brand-values.jpg";
+import brand_values_webp from "@/images/concept/brand-values.webp";
 
 export default function ConceptPage() {
   return (
@@ -15,11 +15,11 @@ export default function ConceptPage() {
       <section className="relative flex justify-center border-4 md:justify-start">
         <div
           className="
-          grid min-h-[calc(100vh-5rem)] max-w-xs grid-rows-[1fr_auto_auto] gap-12 border border-red-500 px-8 py-24 text-center
-          md:ml-8 md:grid-rows-none md:place-content-center md:gap-6 md:text-start 
-          lg:ml-16 lg:max-w-sm
-          xl:ml-24 
-          2xl:ml-32
+            grid min-h-[calc(100vh-5rem)] max-w-xs grid-rows-[1fr_auto_auto] gap-12 border border-red-500 px-8 py-24 text-center
+            md:ml-8 md:grid-rows-none md:place-content-center md:gap-6 md:text-start 
+            lg:ml-16 lg:max-w-sm
+            xl:ml-24 
+            2xl:ml-32
           "
         >
           <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
@@ -41,10 +41,10 @@ export default function ConceptPage() {
         </div>
         <picture
           className="pointer-events-none absolute inset-y-0 right-0 -z-10 w-screen mix-blend-lighten 
-        md:-mb-24 md:w-[30rem] 
-        xl:w-[34rem] 
-        2xl:w-[38rem]
-      "
+            md:-mb-24 md:w-[30rem] 
+            xl:w-[34rem] 
+            2xl:w-[38rem]
+          "
         >
           <source srcSet={hero_webp.src} type="image/webp" />
           <Image
@@ -66,11 +66,11 @@ export default function ConceptPage() {
       >
         <div
           className="
-          grid min-h-[calc(100vh-5rem)] max-w-xs grid-rows-[1fr_auto] gap-12 border border-red-500 px-8 py-24 text-center
-          md:mr-8 md:grid-rows-none md:place-content-center md:gap-6 md:text-end 
-          lg:mr-16 lg:max-w-sm
-          xl:mr-24 
-          2xl:mr-32
+            grid min-h-[calc(100vh-5rem)] max-w-xs grid-rows-[1fr_auto] gap-12 border border-red-500 px-8 py-24 text-center
+            md:mr-8 md:grid-rows-none md:place-content-center md:gap-6 md:text-end 
+            lg:mr-16 lg:max-w-sm
+            xl:mr-24 
+            2xl:mr-32
           "
         >
           <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
@@ -83,11 +83,11 @@ export default function ConceptPage() {
         </div>
         <picture
           className="
-        pointer-events-none absolute inset-y-0 left-0 -z-10 h-auto w-screen mix-blend-lighten 
-        md:-mb-24 md:w-[30rem] 
-        xl:w-[34rem] 
-        2xl:w-[38rem]
-      "
+            pointer-events-none absolute inset-y-0 left-0 -z-10 h-auto w-screen mix-blend-lighten 
+            md:-mb-24 md:w-[30rem] 
+            xl:w-[34rem] 
+            2xl:w-[38rem]
+          "
         >
           <source srcSet={expert_webp.src} type="image/webp" />
           <Image
@@ -110,7 +110,7 @@ export default function ConceptPage() {
           lg:grid-cols-4 lg:px-16
           xl:px-24
           2xl:px-32
-          "
+        "
       >
         <div className="h-56 w-56 rounded-full border" />
         <div className="h-56 w-56 rounded-full border" />
@@ -120,11 +120,11 @@ export default function ConceptPage() {
       <section className="relative flex justify-center border md:justify-start">
         <div
           className="
-          grid min-h-[calc(100vh-5rem)] max-w-xs grid-rows-[1fr_auto_auto] gap-12 border border-red-500 px-8 py-24 text-center
-          md:ml-8 md:grid-rows-none md:place-content-center md:gap-6 md:text-start 
-          lg:ml-16 lg:max-w-sm
-          xl:ml-24 
-          2xl:ml-32
+            grid min-h-[calc(100vh-5rem)] max-w-xs grid-rows-[1fr_auto_auto] gap-12 border border-red-500 px-8 py-24 text-center
+            md:ml-8 md:grid-rows-none md:place-content-center md:gap-6 md:text-start 
+            lg:ml-16 lg:max-w-sm
+            xl:ml-24 
+            2xl:ml-32
           "
         >
           <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
@@ -145,12 +145,14 @@ export default function ConceptPage() {
           </Link>
         </div>
         <picture
-          className="pointer-events-none absolute inset-y-0 right-0 -z-10 h-auto w-screen mix-blend-lighten 
-      md:w-[30rem] xl:w-[34rem] 2xl:w-[38rem]"
+          className="
+            pointer-events-none absolute inset-y-0 right-0 -z-10 h-auto w-screen mix-blend-lighten 
+            md:w-[30rem] xl:w-[34rem] 2xl:w-[38rem]
+          "
         >
-          <source srcSet={build_webp.src} type="image/webp" />
+          <source srcSet={brand_values_webp.src} type="image/webp" />
           <Image
-            src={build_jpg}
+            src={brand_values_jpg}
             alt="Chanteur"
             sizes="(min-width: 768px) 30rem, (min-width: 1280px) 34rem, (min-width: 1536px) 38rem, 100vw"
             fill
