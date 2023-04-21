@@ -8,6 +8,8 @@ import { PropsWithChildren, useState } from "react";
 import { SOCIALS } from "@/lib/socials";
 import { TERMS } from "@/lib/terms";
 import jane_do_svg from "@/images/jane-do.svg";
+import vinyl_png from "@/images/vinyl/vinyl.png";
+import currentVinylLabel from "@/images/vinyl/home.svg";
 
 export default function RootLayout({ children }: PropsWithChildren) {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,7 +17,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
     <>
       <nav
         data-is-open={isOpen}
-        className="fixed z-10 grid h-screen w-screen -translate-y-full bg-black data-[is-open='true']:translate-y-0 lg:grid-cols-[55%_45%]"
+        className="fixed z-10 grid h-full w-full translate-y-full bg-black data-[is-open='true']:translate-y-0 lg:grid-cols-[55%_45%]"
       >
         <ul className="mt-20 grid border-4 border-blue-500 bg-black text-2xl">
           <li>
@@ -64,8 +66,22 @@ export default function RootLayout({ children }: PropsWithChildren) {
             </Link>
           </li>
         </ul>
-        <aside className="relative -z-10 hidden -translate-x-1/2 lg:mt-20 lg:grid lg:place-items-center lg:border-4 lg:border-green-500">
-          <div className="absolute h-full w-full rounded-full border-4" />
+        <aside className="-z-10 hidden -translate-x-1/2 lg:mt-20 lg:grid lg:place-items-center lg:border-4 lg:border-green-500">
+          <Image
+            src={vinyl_png}
+            alt="Vinyl"
+            fill
+            priority
+            placeholder="blur"
+            className="animate-spin-service pointer-events-none z-50 hidden object-contain lg:block"
+          />
+          <Image
+            src={currentVinylLabel}
+            alt="Vinyl Label"
+            fill
+            priority
+            className="animate-spin-service pointer-events-none z-50 hidden object-contain lg:block"
+          />
         </aside>
       </nav>
       <header className="fixed z-10 flex h-20 w-full items-center justify-between border-b">
