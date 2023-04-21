@@ -1,8 +1,8 @@
-import { Button, buttonVariants } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 
-export default function HomePage() {
+export default function ConceptPage() {
   return (
     <>
       <section
@@ -19,11 +19,11 @@ export default function HomePage() {
           "
         >
           <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
-            Partagez votre voix
+            L&apos;essence de Jane Do
           </h1>
           <p className="leading-7 lg:text-lg">
-            Découvrez nos services à travers notre site internet ainsi que nos
-            différents réseaux.
+            La volonté de Jane Do c&apos;est de vous aider dans le développement
+            de votre univers artistique.
           </p>
           <a
             href="#discover"
@@ -51,11 +51,11 @@ export default function HomePage() {
           "
         >
           <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
-            Découvrez Jane Do
+            Expertise de votre projet
           </h1>
           <p className="leading-7 lg:text-lg">
-            Ensemble nous élaborons votre image artistique via une communication
-            adaptée.
+            Compétences, conseils et analyse de votre image afin de vous
+            proposer une idée précise de votre future communication.
           </p>
         </div>
       </section>
@@ -75,7 +75,6 @@ export default function HomePage() {
         <div className="h-56 w-56 rounded-full border" />
         <div className="h-56 w-56 rounded-full border" />
       </section>
-
       <section
         id="join"
         className="flex justify-center border md:justify-start"
@@ -90,11 +89,11 @@ export default function HomePage() {
           "
         >
           <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
-            Rejoindre l&apos;aventure
+            Bâtir ensemble
           </h1>
           <p className="leading-7 lg:text-lg">
-            Vous avez des questions , des demandes ou un projet à nous faire
-            découvrir ?
+            L&apos;écoute, la proximité et l&apos;inclusivité sont les mots
+            d&apos;ordre pour chacun des projets que nous entreprenons.
           </p>
           <Link
             href="/contact"

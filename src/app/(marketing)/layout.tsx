@@ -29,7 +29,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
               </Link>
             </li>
             <li>
-              <Link href="/">
+              <Link href="/concept">
                 <div className="text-sm text-muted-foreground">02.</div>
                 <div>Concept</div>
               </Link>
