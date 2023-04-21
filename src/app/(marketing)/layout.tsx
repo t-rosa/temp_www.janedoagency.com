@@ -1,16 +1,74 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { SERVICES } from "@/lib/services";
 import Link from "next/link";
 import Image from "next/image";
-import { PropsWithChildren } from "react";
+import { PropsWithChildren, useState } from "react";
 import { SOCIALS } from "@/lib/socials";
 import { TERMS } from "@/lib/terms";
 import jane_do_svg from "@/images/jane-do.svg";
 
 export default function RootLayout({ children }: PropsWithChildren) {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      <header className="flex h-20 items-center justify-between border-b">
+      <nav
+        data-is-open={isOpen}
+        className="fixed z-10 grid h-screen w-screen -translate-y-full bg-black data-[is-open='true']:translate-y-0 lg:grid-cols-[55%_45%]"
+      >
+        <ul className="mt-20 grid border-4 border-blue-500 bg-black text-2xl">
+          <li>
+            <Link
+              href="/"
+              className="flex h-full w-full items-center justify-center gap-3 border-b lg:justify-start lg:pl-16 xl:pl-24 2xl:pl-32"
+            >
+              <div className="text-sm text-muted-foreground">01.</div>
+              <div>Accueil</div>
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/concept"
+              className="flex h-full w-full items-center justify-center gap-3 border-b lg:justify-start lg:pl-16 xl:pl-24 2xl:pl-32"
+            >
+              <div className="text-sm text-muted-foreground">02.</div>
+              <div>Concept</div>
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/services"
+              className="flex h-full w-full items-center justify-center gap-3 border-b lg:justify-start lg:pl-16 xl:pl-24 2xl:pl-32"
+            >
+              <div className="text-sm text-muted-foreground">03.</div>
+              <div>Services</div>
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/news"
+              className="flex h-full w-full items-center justify-center gap-3 border-b lg:justify-start lg:pl-16 xl:pl-24 2xl:pl-32"
+            >
+              <div className="text-sm text-muted-foreground">04.</div>
+              <div>News</div>
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/contact"
+              className="flex h-full w-full items-center justify-center gap-3 lg:justify-start lg:pl-16 xl:pl-24 2xl:pl-32"
+            >
+              <div className="text-sm text-muted-foreground">05.</div>
+              <div>Contact</div>
+            </Link>
+          </li>
+        </ul>
+        <aside className="relative -z-10 hidden -translate-x-1/2 lg:mt-20 lg:grid lg:place-items-center lg:border-4 lg:border-green-500">
+          <div className="absolute h-full w-full rounded-full border-4" />
+        </aside>
+      </nav>
+      <header className="fixed z-10 mb-20 flex h-20 w-full items-center justify-between border-b">
         <nav className="flex w-full items-center justify-between">
           <Link
             href="/"
@@ -21,7 +79,10 @@ export default function RootLayout({ children }: PropsWithChildren) {
             2xl:ml-32
             "
           />
-          <ul className="mr-16 hidden gap-6 text-xl lg:flex xl:mr-24 2xl:mr-32">
+          <ul
+            data-is-open={isOpen}
+            className="mr-16 hidden gap-6 text-xl data-[is-open='true']:hidden lg:flex xl:mr-24 2xl:mr-32"
+          >
             <li>
               <Link href="/">
                 <div className="text-sm text-muted-foreground">01.</div>
@@ -57,6 +118,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
         <Button
           variant="ghost"
           className="grid h-full rounded-none border-l hover:bg-none"
+          onClick={() => setIsOpen(!isOpen)}
         >
           <div className="col-span-full row-span-full h-px w-24 -translate-y-2 bg-primary" />
           <div className="col-span-full row-span-full h-px w-24 translate-y-2 bg-primary" />
