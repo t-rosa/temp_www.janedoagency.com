@@ -11,7 +11,7 @@ export default function ServicePage() {
       >
         <div
           className="
-          grid h-[calc(100vh-5rem)] max-w-xs grid-rows-[1fr_auto_auto] gap-12 border border-red-500 px-8 py-24 text-center
+          grid min-h-[calc(100vh-5rem)] max-w-xs grid-rows-[1fr_auto_auto] gap-12 border border-red-500 px-8 py-24 text-center
           md:ml-8 md:grid-rows-none md:place-content-center md:gap-6 md:text-start 
           lg:ml-16 lg:max-w-sm
           xl:ml-24 
@@ -42,7 +42,7 @@ export default function ServicePage() {
       >
         <div
           className="
-          grid h-[calc(100vh-5rem)] max-w-xs grid-rows-[1fr_auto] justify-items-center gap-12 border border-red-500 px-8 py-24 text-center
+          grid min-h-[calc(100vh-5rem)] max-w-xs grid-rows-[1fr_auto] justify-items-center gap-12 border border-red-500 px-8 py-24 text-center
           md:mr-8 md:max-w-md md:grid-rows-none md:place-content-center md:gap-6 md:text-end 
           lg:mr-16 lg:max-w-lg
           xl:mr-24 
@@ -70,7 +70,7 @@ export default function ServicePage() {
       >
         <div
           className="
-          grid h-[calc(100vh-5rem)] max-w-xs grid-rows-[1fr_auto] justify-items-center gap-12 border border-red-500 px-4 py-24 text-center md:ml-8
+          grid min-h-[calc(100vh-5rem)] max-w-xs grid-rows-[1fr_auto] justify-items-center gap-12 border border-red-500 px-4 py-24 text-center md:ml-8
           md:max-w-md md:grid-rows-none md:place-content-center md:gap-6 md:px-8 md:text-start 
           lg:ml-16 lg:max-w-lg
           xl:ml-24 
@@ -98,7 +98,7 @@ export default function ServicePage() {
       >
         <div
           className="
-          grid h-[calc(100vh-5rem)] max-w-xs grid-rows-[1fr_auto] justify-items-center gap-12 border border-red-500 px-4 py-24 text-center
+          grid min-h-[calc(100vh-5rem)] max-w-xs grid-rows-[1fr_auto] justify-items-center gap-12 border border-red-500 px-4 py-24 text-center
           md:mr-8 md:max-w-md md:grid-rows-none md:place-content-center md:gap-6 md:text-end 
           lg:mr-16 lg:max-w-lg
           xl:mr-24 
@@ -126,7 +126,7 @@ export default function ServicePage() {
       >
         <div
           className="
-          grid h-[calc(100vh-5rem)] max-w-xs grid-rows-[1fr_auto] justify-items-center gap-12 border border-red-500 px-4 py-24 text-center md:ml-8
+          grid min-h-[calc(100vh-5rem)] max-w-xs grid-rows-[1fr_auto] justify-items-center gap-12 border border-red-500 px-4 py-24 text-center md:ml-8
           md:max-w-md md:grid-rows-none md:place-content-center md:gap-6 md:px-8 md:text-start 
           lg:ml-16 lg:max-w-lg
           xl:ml-24 
@@ -151,7 +151,7 @@ export default function ServicePage() {
       <section id="join" className="flex justify-center border md:justify-end">
         <div
           className="
-          grid h-[calc(100vh-5rem)] max-w-xs grid-rows-[1fr_auto] gap-12 border border-red-500 px-8 py-24 text-center
+          grid min-h-[calc(100vh-5rem)] max-w-xs grid-rows-[1fr_auto] gap-12 border border-red-500 px-8 py-24 text-center
           md:mr-8 md:grid-rows-none md:place-content-center md:gap-6 md:text-end 
           lg:mr-16 lg:max-w-sm
           xl:mr-24 
