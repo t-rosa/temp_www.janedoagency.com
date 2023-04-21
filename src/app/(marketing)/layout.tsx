@@ -68,7 +68,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
           <div className="absolute h-full w-full rounded-full border-4" />
         </aside>
       </nav>
-      <header className="fixed z-10 mb-20 flex h-20 w-full items-center justify-between border-b">
+      <header className="fixed z-10 flex h-20 w-full items-center justify-between border-b">
         <nav className="flex w-full items-center justify-between">
           <Link
             href="/"
@@ -124,7 +124,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
           <div className="col-span-full row-span-full h-px w-24 translate-y-2 bg-primary" />
         </Button>
       </header>
-      <main className="min-h-[calc(100vh-5rem)]">{children}</main>
+      <main className="min-h-[calc(100vh-5rem)] pt-20">{children}</main>
       <footer
         id="footer"
         className="

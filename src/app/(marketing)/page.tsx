@@ -1,13 +1,20 @@
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import Image from "next/image";
+import intro_jpg from "@/images/home/intro.jpg";
+import intro_webp from "@/images/home/intro.webp";
+import discover_jpg from "@/images/home/discover.jpg";
+import discover_webp from "@/images/home/discover.webp";
+import join_jpg from "@/images/home/join.jpg";
+import join_webp from "@/images/home/join.webp";
 
 export default function HomePage() {
   return (
     <>
       <section
         id="hero"
-        className="flex justify-center border-4 md:justify-start"
+        className="relative flex justify-center border-4 md:justify-start"
       >
         <div
           className="
@@ -35,11 +42,27 @@ export default function HomePage() {
             Découvrir
           </a>
         </div>
+        <picture
+          className="pointer-events-none absolute inset-y-0 right-0 -z-10 w-screen mix-blend-lighten 
+      md:-mb-24 md:w-[36rem] lg:w-[44rem]"
+        >
+          <source srcSet={intro_webp.src} type="image/webp" />
+          <Image
+            src={intro_jpg}
+            alt="Chanteuse"
+            sizes="(min-width: 768px) 36rem, (min-width: 1024px) 44rem, 100vw"
+            fill
+            priority
+            placeholder="blur"
+            className="object-cover opacity-30 md:rounded-b-full lg:opacity-90"
+          />
+          <div className="absolute -inset-1 bg-gradient-to-t from-background via-transparent to-background md:rounded-b-full" />
+        </picture>
       </section>
 
       <section
         id="discover"
-        className="flex justify-center border md:justify-end"
+        className="relative flex justify-center border md:justify-end"
       >
         <div
           className="
@@ -58,6 +81,26 @@ export default function HomePage() {
             adaptée.
           </p>
         </div>
+        <picture
+          className="
+        pointer-events-none absolute inset-y-0 left-0 -z-10 h-auto w-screen mix-blend-lighten 
+        md:-mb-24 md:w-[30rem] 
+        xl:w-[34rem] 
+        2xl:w-[38rem]
+      "
+        >
+          <source srcSet={discover_webp.src} type="image/webp" />
+          <Image
+            src={discover_jpg}
+            alt="Micro"
+            sizes="(min-width: 768px) 30rem, (min-width: 1280px) 34rem, (min-width: 1536px) 38rem, 100vw"
+            fill
+            priority
+            placeholder="blur"
+            className="object-cover opacity-30 md:rounded-b-full lg:opacity-90"
+          />
+          <div className="absolute -inset-1 bg-gradient-to-t from-transparent to-background md:rounded-b-full" />
+        </picture>
       </section>
 
       <section
@@ -78,7 +121,7 @@ export default function HomePage() {
 
       <section
         id="join"
-        className="flex justify-center border md:justify-start"
+        className="relative flex justify-center border md:justify-start"
       >
         <div
           className="
@@ -106,6 +149,22 @@ export default function HomePage() {
             Contactez-nous
           </Link>
         </div>
+        <picture
+          className="pointer-events-none absolute inset-y-0 right-0 -z-10 h-auto w-screen mix-blend-lighten 
+      md:w-[30rem] xl:w-[34rem] 2xl:w-[38rem]"
+        >
+          <source srcSet={join_webp.src} type="image/webp" />
+          <Image
+            src={join_jpg}
+            alt="Chanteur"
+            sizes="(min-width: 768px) 30rem, (min-width: 1280px) 34rem, (min-width: 1536px) 38rem, 100vw"
+            fill
+            priority
+            placeholder="blur"
+            className="object-cover opacity-30 md:rounded-t-full lg:opacity-90"
+          />
+          <div className="absolute -inset-1 bg-gradient-to-t from-background via-transparent to-background md:rounded-t-full" />
+        </picture>
       </section>
     </>
   );
