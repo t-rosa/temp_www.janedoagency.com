@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function ServicePage() {
   return (
     <>
-      <section id="hero" className="flex justify-center md:justify-start">
+      <section className="flex justify-center md:justify-start">
         <div
           className="
           grid min-h-[calc(100vh-5rem)] max-w-xs grid-rows-[1fr_auto_auto] gap-12 border border-red-500 px-8 py-24 text-center

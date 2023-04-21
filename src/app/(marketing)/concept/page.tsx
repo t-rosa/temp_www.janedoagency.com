@@ -1,14 +1,18 @@
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import Image from "next/image";
+import hero_jpg from "@/images/concept/hero.jpg";
+import hero_webp from "@/images/concept/hero.webp";
+import expert_jpg from "@/images/concept/expert.jpg";
+import expert_webp from "@/images/concept/expert.webp";
+import build_jpg from "@/images/concept/build.jpg";
+import build_webp from "@/images/concept/build.webp";
 
 export default function ConceptPage() {
   return (
     <>
-      <section
-        id="hero"
-        className="flex justify-center border-4 md:justify-start"
-      >
+      <section className="relative flex justify-center border-4 md:justify-start">
         <div
           className="
           grid min-h-[calc(100vh-5rem)] max-w-xs grid-rows-[1fr_auto_auto] gap-12 border border-red-500 px-8 py-24 text-center
@@ -35,11 +39,30 @@ export default function ConceptPage() {
             Découvrir
           </a>
         </div>
+        <picture
+          className="pointer-events-none absolute inset-y-0 right-0 -z-10 w-screen mix-blend-lighten 
+        md:-mb-24 md:w-[30rem] 
+        xl:w-[34rem] 
+        2xl:w-[38rem]
+      "
+        >
+          <source srcSet={hero_webp.src} type="image/webp" />
+          <Image
+            src={hero_jpg}
+            alt="Équipe"
+            sizes="(min-width: 768px) 30rem, (min-width: 1280px) 34rem, (min-width: 1536px) 38rem, 100vw"
+            fill
+            priority
+            placeholder="blur"
+            className="object-cover opacity-30 md:rounded-b-full lg:opacity-90"
+          />
+          <div className="absolute -inset-1 bg-gradient-to-t from-background via-transparent to-background md:rounded-b-full" />
+        </picture>
       </section>
 
       <section
         id="discover"
-        className="flex justify-center border md:justify-end"
+        className="relative flex justify-center border md:justify-end"
       >
         <div
           className="
@@ -58,13 +81,32 @@ export default function ConceptPage() {
             proposer une idée précise de votre future communication.
           </p>
         </div>
+        <picture
+          className="
+        pointer-events-none absolute inset-y-0 left-0 -z-10 h-auto w-screen mix-blend-lighten 
+        md:-mb-24 md:w-[30rem] 
+        xl:w-[34rem] 
+        2xl:w-[38rem]
+      "
+        >
+          <source srcSet={expert_webp.src} type="image/webp" />
+          <Image
+            src={expert_jpg}
+            alt="Expert"
+            sizes="(min-width: 768px) 30rem, (min-width: 1280px) 34rem, (min-width: 1536px) 38rem, 100vw"
+            fill
+            priority
+            placeholder="blur"
+            className="object-cover opacity-30 md:rounded-b-full lg:opacity-90"
+          />
+          <div className="absolute -inset-1 bg-gradient-to-t from-background via-transparent to-background md:rounded-b-full" />
+        </picture>
       </section>
 
       <section
-        id="services"
         className="
           grid w-full place-items-center gap-12 border border-red-500 px-8 py-24 text-center
-        md:grid-cols-2
+          md:grid-cols-2
           lg:grid-cols-4 lg:px-16
           xl:px-24
           2xl:px-32
@@ -75,10 +117,7 @@ export default function ConceptPage() {
         <div className="h-56 w-56 rounded-full border" />
         <div className="h-56 w-56 rounded-full border" />
       </section>
-      <section
-        id="join"
-        className="flex justify-center border md:justify-start"
-      >
+      <section className="relative flex justify-center border md:justify-start">
         <div
           className="
           grid min-h-[calc(100vh-5rem)] max-w-xs grid-rows-[1fr_auto_auto] gap-12 border border-red-500 px-8 py-24 text-center
@@ -105,6 +144,22 @@ export default function ConceptPage() {
             Contactez-nous
           </Link>
         </div>
+        <picture
+          className="pointer-events-none absolute inset-y-0 right-0 -z-10 h-auto w-screen mix-blend-lighten 
+      md:w-[30rem] xl:w-[34rem] 2xl:w-[38rem]"
+        >
+          <source srcSet={build_webp.src} type="image/webp" />
+          <Image
+            src={build_jpg}
+            alt="Chanteur"
+            sizes="(min-width: 768px) 30rem, (min-width: 1280px) 34rem, (min-width: 1536px) 38rem, 100vw"
+            fill
+            priority
+            placeholder="blur"
+            className="object-cover opacity-30 md:rounded-t-full lg:opacity-90"
+          />
+          <div className="absolute -inset-1 bg-gradient-to-t from-background via-transparent to-background md:rounded-t-full" />
+        </picture>
       </section>
     </>
   );

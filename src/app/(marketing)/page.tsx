@@ -2,8 +2,8 @@ import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import Image from "next/image";
-import intro_jpg from "@/images/home/intro.jpg";
-import intro_webp from "@/images/home/intro.webp";
+import hero_jpg from "@/images/home/hero.jpg";
+import hero_webp from "@/images/home/hero.webp";
 import discover_jpg from "@/images/home/discover.jpg";
 import discover_webp from "@/images/home/discover.webp";
 import join_jpg from "@/images/home/join.jpg";
@@ -12,10 +12,7 @@ import join_webp from "@/images/home/join.webp";
 export default function HomePage() {
   return (
     <>
-      <section
-        id="hero"
-        className="relative flex justify-center border-4 md:justify-start"
-      >
+      <section className="relative flex justify-center border-4 md:justify-start">
         <div
           className="
           grid min-h-[calc(100vh-5rem)] max-w-xs grid-rows-[1fr_auto_auto] gap-12 border border-red-500 px-8 py-24 text-center
@@ -43,12 +40,14 @@ export default function HomePage() {
           </a>
         </div>
         <picture
-          className="pointer-events-none absolute inset-y-0 right-0 -z-10 w-screen mix-blend-lighten 
-      md:-mb-24 md:w-[36rem] lg:w-[44rem]"
+          className="
+            pointer-events-none absolute inset-y-0 right-0 -z-10 w-screen mix-blend-lighten 
+            md:-mb-24 md:w-[36rem] lg:w-[44rem]
+          "
         >
-          <source srcSet={intro_webp.src} type="image/webp" />
+          <source srcSet={hero_webp.src} type="image/webp" />
           <Image
-            src={intro_jpg}
+            src={hero_jpg}
             alt="Chanteuse"
             sizes="(min-width: 768px) 36rem, (min-width: 1024px) 44rem, 100vw"
             fill
@@ -83,11 +82,11 @@ export default function HomePage() {
         </div>
         <picture
           className="
-        pointer-events-none absolute inset-y-0 left-0 -z-10 h-auto w-screen mix-blend-lighten 
-        md:-mb-24 md:w-[30rem] 
-        xl:w-[34rem] 
-        2xl:w-[38rem]
-      "
+            pointer-events-none absolute inset-y-0 left-0 -z-10 h-auto w-screen mix-blend-lighten 
+            md:-mb-24 md:w-[30rem] 
+            xl:w-[34rem] 
+            2xl:w-[38rem]
+          "
         >
           <source srcSet={discover_webp.src} type="image/webp" />
           <Image
@@ -104,14 +103,13 @@ export default function HomePage() {
       </section>
 
       <section
-        id="services"
         className="
           grid w-full place-items-center gap-12 border border-red-500 px-8 py-24 text-center
-        md:grid-cols-2
+          md:grid-cols-2
           lg:grid-cols-4 lg:px-16
           xl:px-24
           2xl:px-32
-          "
+        "
       >
         <div className="h-56 w-56 rounded-full border" />
         <div className="h-56 w-56 rounded-full border" />
@@ -119,17 +117,14 @@ export default function HomePage() {
         <div className="h-56 w-56 rounded-full border" />
       </section>
 
-      <section
-        id="join"
-        className="relative flex justify-center border md:justify-start"
-      >
+      <section className="relative flex justify-center border md:justify-start">
         <div
           className="
-          grid min-h-[calc(100vh-5rem)] max-w-xs grid-rows-[1fr_auto_auto] gap-12 border border-red-500 px-8 py-24 text-center
-          md:ml-8 md:grid-rows-none md:place-content-center md:gap-6 md:text-start 
-          lg:ml-16 lg:max-w-sm
-          xl:ml-24 
-          2xl:ml-32
+            grid min-h-[calc(100vh-5rem)] max-w-xs grid-rows-[1fr_auto_auto] gap-12 border border-red-500 px-8 py-24 text-center
+            md:ml-8 md:grid-rows-none md:place-content-center md:gap-6 md:text-start 
+            lg:ml-16 lg:max-w-sm
+            xl:ml-24 
+            2xl:ml-32
           "
         >
           <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
@@ -150,8 +145,10 @@ export default function HomePage() {
           </Link>
         </div>
         <picture
-          className="pointer-events-none absolute inset-y-0 right-0 -z-10 h-auto w-screen mix-blend-lighten 
-      md:w-[30rem] xl:w-[34rem] 2xl:w-[38rem]"
+          className="
+            pointer-events-none absolute inset-y-0 right-0 -z-10 h-auto w-screen mix-blend-lighten 
+            md:w-[30rem] xl:w-[34rem] 2xl:w-[38rem]
+          "
         >
           <source srcSet={join_webp.src} type="image/webp" />
           <Image
