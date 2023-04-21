@@ -47,7 +47,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
               </Link>
             </li>
             <li>
-              <Link href="/">
+              <Link href="/contact">
                 <div className="text-sm text-muted-foreground">05.</div>
                 <div>Contact</div>
               </Link>
