@@ -4,6 +4,7 @@ import brand_values_webp from "@/images/concept/brand-values.webp";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
+import { Highlighter } from "@/components/highlighter";
 
 export function Join() {
   return (
@@ -22,7 +23,10 @@ export function Join() {
           ensemble
         </h2>
         <p className="text-xl font-light leading-7 xl:text-2xl 2xl:text-3xl">
-          Chez Jane Do l&apos;écoute, la <br /> proximité et l&apos;inclusivité
+          Chez Jane Do l&apos;écoute, la <br />
+          <Highlighter direction="right" inView={true}>
+            proximité et l&apos;inclusivité
+          </Highlighter>
           sont <br />
           les mots d&apos;ordre pour chacun <br /> des projets que nous <br />
           entreprenons ensemble.

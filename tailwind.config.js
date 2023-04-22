@@ -83,7 +83,7 @@ module.exports = {
           from: {
             top: 0,
             right: "100%",
-            left: -2,
+            left: 0,
             bottom: 0,
             transform: "skew(-12deg)",
           },

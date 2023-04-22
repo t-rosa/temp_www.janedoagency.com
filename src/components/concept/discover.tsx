@@ -1,6 +1,7 @@
 import expert_jpg from "@/images/concept/expert.jpg";
 import expert_webp from "@/images/concept/expert.webp";
 import Image from "next/image";
+import { Highlighter } from "../highlighter";
 
 export function Discover() {
   return (
@@ -22,8 +23,11 @@ export function Discover() {
         </h2>
         <p className="text-xl font-light leading-7 xl:text-2xl 2xl:text-3xl">
           Compétences, conseils et <br /> analyse de votre image afin de
-          <br /> vous proposer une idée précise <br /> de votre future
-          communication.
+          <br /> vous
+          <Highlighter direction="left" inView={true}>
+            proposer une idée
+          </Highlighter>
+          précise <br /> de votre future communication.
         </p>
       </div>
       <picture

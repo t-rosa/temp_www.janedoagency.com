@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import hero_jpg from "@/images/concept/hero.jpg";
 import hero_webp from "@/images/concept/hero.webp";
+import { Highlighter } from "../highlighter";
 
 export function Hero() {
   return (
@@ -21,7 +22,11 @@ export function Hero() {
           de Jane Do
         </h1>
         <p className="text-xl font-light leading-7 xl:text-2xl 2xl:text-3xl">
-          La volonté de Jane Do c&apos;est <br /> de vous aider dans le <br />
+          La volonté de Jane Do c&apos;est <br /> de{" "}
+          <Highlighter direction="right" inView={true}>
+            vous aider
+          </Highlighter>
+          dans le <br />
           développement de votre <br /> univers artistique.
         </p>
         <a
