@@ -3,6 +3,7 @@ import hero_jpg from "@/images/services/hero.jpg";
 import hero_webp from "@/images/services/hero.webp";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import { Highlighter } from "@/components/highlighter";
 
 export function Hero() {
   return (
@@ -21,8 +22,11 @@ export function Hero() {
           des projets ?
         </h1>
         <p className="text-xl font-light leading-7 xl:text-2xl 2xl:text-3xl">
-          Jane Do vous propose <br /> différents services adaptée pour <br />{" "}
-          développer vos projets !
+          Jane Do vous propose <br /> différents&nbsp;
+          <Highlighter direction="right" inView>
+            services adaptée
+          </Highlighter>
+          pour <br /> développer vos projets !
         </p>
         <a
           href="#social-media"

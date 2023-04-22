@@ -1,6 +1,7 @@
 import Image from "next/image";
 import communication_jpg from "@/images/services/communication.jpg";
 import communication_webp from "@/images/services/communication.webp";
+import { Highlighter } from "../highlighter";
 
 export function Communication() {
   return (
@@ -23,8 +24,11 @@ export function Communication() {
           </h2>
         </div>
         <p className="text-lg font-light leading-7 lg:text-xl xl:text-2xl">
-          Création, planification, gestion <br /> et optimisation de vos
-          réseaux.
+          <Highlighter direction="right" inView>
+            Élaborons votre communication
+          </Highlighter>
+          <br /> Jane Do vous permet
+          <br /> d&apos;accéder à son réseau.
         </p>
       </div>
       <picture

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import brand_values_jpg from "@/images/concept/brand-values.jpg";
 import brand_values_webp from "@/images/concept/brand-values.webp";
+import { Highlighter } from "../highlighter";
 
 export function BrandValues() {
   return (
@@ -23,7 +24,11 @@ export function BrandValues() {
           </h2>
         </div>
         <p className="text-lg font-light leading-7 lg:text-xl xl:text-2xl">
-          Charte graphique, logo une <br /> identité forte pour faire adhérer
+          Charte graphique, logo une <br />
+          <Highlighter direction="left" inView>
+            identité forte
+          </Highlighter>
+          pour faire adhérer
           <br /> vos cibles à votre univers !
         </p>
       </div>

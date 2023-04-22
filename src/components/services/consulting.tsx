@@ -1,6 +1,7 @@
 import Image from "next/image";
 import consulting_jpg from "@/images/services/consulting.jpg";
 import consulting_webp from "@/images/services/consulting.webp";
+import { Highlighter } from "../highlighter";
 
 export function Consulting() {
   return (
@@ -23,8 +24,12 @@ export function Consulting() {
           </h2>
         </div>
         <p className="text-lg font-light leading-7 lg:text-xl xl:text-2xl">
-          Besoin d&apos;un avis extérieur ? <br /> Le but est de vous donner une{" "}
-          <br /> vision claire de votre stratégie.
+          Besoin d&apos;un&nbsp;
+          <Highlighter direction="right" inView>
+            avis extérieur
+          </Highlighter>
+          ? <br /> Le but est de vous donner une <br /> vision claire de votre
+          stratégie.
         </p>
       </div>
       <picture

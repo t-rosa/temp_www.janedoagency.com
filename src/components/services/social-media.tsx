@@ -1,6 +1,7 @@
 import social_media_jpg from "@/images/services/social-media.jpg";
 import social_media_webp from "@/images/services/social-media.webp";
 import Image from "next/image";
+import { Highlighter } from "../highlighter";
 
 export function SocialMedia() {
   return (
@@ -24,8 +25,10 @@ export function SocialMedia() {
           </h2>
         </div>
         <p className="text-lg font-light leading-7 lg:text-xl xl:text-2xl">
-          Création, planification, gestion <br /> et optimisation de vos
-          réseaux.
+          <Highlighter direction="left" inView>
+            Création, planification
+          </Highlighter>
+          , gestion <br /> et optimisation de vos réseaux.
         </p>
       </div>
       <picture
