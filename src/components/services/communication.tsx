@@ -25,7 +25,7 @@ export function Communication() {
         <div
           ref={ref}
           data-in-view={inView}
-          className="flex self-start opacity-0 data-in-view:animate-title-slide-right md:self-auto"
+          className="flex self-start justify-self-center opacity-0 data-in-view:animate-title-slide-right md:self-auto"
         >
           <div className="scroll-m-20 border p-6 text-xl font-extrabold tracking-tight md:text-3xl lg:text-4xl">
             02

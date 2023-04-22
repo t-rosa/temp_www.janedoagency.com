@@ -26,12 +26,12 @@ export function SocialMedia() {
         <div
           ref={ref}
           data-in-view={inView}
-          className="flex opacity-0 data-in-view:animate-title-slide-left"
+          className="flex self-start justify-self-center opacity-0 data-in-view:animate-title-slide-left md:self-auto"
         >
           <div className="scroll-m-20 border p-6 text-xl font-extrabold tracking-tight md:text-3xl lg:text-4xl">
             01
           </div>
-          <h2 className="w-full scroll-m-20 border border-l-0 p-6 text-xl font-extrabold tracking-tight md:text-3xl lg:text-4xl">
+          <h2 className="scroll-m-20 border border-l-0 p-6 text-xl font-extrabold tracking-tight md:w-full md:text-3xl lg:text-4xl">
             Social Media
           </h2>
         </div>
