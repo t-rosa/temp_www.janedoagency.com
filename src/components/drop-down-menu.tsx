@@ -109,7 +109,7 @@ export function DropDownMenu(props: Props) {
       </ul>
       <aside
         data-open={props.open}
-        className="invisible -z-10 -translate-x-full duration-500 data-open:-translate-x-1/2 data-open:delay-500 lg:visible lg:mt-20 lg:grid lg:place-items-center"
+        className="-z-10 hidden -translate-x-full duration-500 data-open:-translate-x-1/2 data-open:delay-500 lg:mt-20 lg:grid lg:place-items-center"
       >
         <Image
           src={vinyl_png}
@@ -118,7 +118,7 @@ export function DropDownMenu(props: Props) {
           fill
           priority
           placeholder="blur"
-          className="pointer-events-none invisible animate-spin-slow rounded-full object-contain lg:visible"
+          className="pointer-events-none hidden animate-spin-slow rounded-full object-contain lg:block"
         />
         <Image
           src={props.currentVinylLabel}
@@ -126,7 +126,7 @@ export function DropDownMenu(props: Props) {
           alt="Vinyl Label"
           fill
           priority
-          className="pointer-events-none invisible animate-spin-slow rounded-full object-contain lg:visible"
+          className="pointer-events-none hidden animate-spin-slow rounded-full object-contain lg:block"
         />
       </aside>
     </nav>

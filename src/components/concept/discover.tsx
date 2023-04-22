@@ -1,30 +1,44 @@
+"use client";
+
 import expert_jpg from "@/images/concept/expert.jpg";
 import expert_webp from "@/images/concept/expert.webp";
 import Image from "next/image";
+import { useInView } from "react-intersection-observer";
 import { Highlighter } from "../highlighter";
 
 export function Discover() {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+  });
+
   return (
     <section
       id="discover"
-      className="relative flex justify-center border md:justify-end"
+      className="relative flex justify-center md:justify-end"
     >
       <div
         className="
-            grid min-h-[calc(100vh-5rem)] grid-rows-[1fr_auto] gap-12 border border-red-500  py-24 text-center
+            grid min-h-[calc(100vh-5rem)] grid-rows-[1fr_auto] gap-12 py-24 text-center
             md:mr-24 md:grid-rows-none md:place-content-center md:gap-6 md:text-end 
             lg:mr-32
             xl:mr-40
             2xl:mr-48
           "
       >
-        <h2 className="scroll-m-20 text-4xl font-extrabold tracking-tight md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">
+        <h2
+          ref={ref}
+          data-in-view={inView}
+          className="-translate-x-full scroll-m-20 text-4xl font-extrabold tracking-tight opacity-0 data-in-view:animate-title-slide-left md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl"
+        >
           Expertise <br /> de projets
         </h2>
-        <p className="text-xl font-light leading-7 xl:text-2xl 2xl:text-3xl">
+        <p
+          data-in-view={inView}
+          className="-translate-y-full text-xl font-light leading-7 opacity-0 data-in-view:animate-text-slide-down xl:text-2xl 2xl:text-3xl"
+        >
           Compétences, conseils et <br /> analyse de votre image afin de
           <br /> vous
-          <Highlighter direction="left" inView={true}>
+          <Highlighter direction="left" inView={inView}>
             proposer une idée
           </Highlighter>
           précise <br /> de votre future communication.

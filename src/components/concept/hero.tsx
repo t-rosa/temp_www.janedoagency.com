@@ -10,18 +10,18 @@ export function Hero() {
     <section className="relative flex justify-center md:justify-start">
       <div
         className="
-            grid min-h-[calc(100vh-5rem)] grid-rows-[1fr_auto_auto] gap-12 border border-red-500  py-24 text-center
+            grid min-h-[calc(100vh-5rem)] grid-rows-[1fr_auto_auto] gap-12 py-24 text-center
             md:ml-24 md:grid-rows-none md:place-content-center md:gap-6 md:text-start 
             lg:ml-32
             xl:ml-40
             2xl:ml-48 
           "
       >
-        <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">
+        <h1 className="-translate-x-full animate-title-slide-right scroll-m-20 text-4xl font-extrabold tracking-tight opacity-0 md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">
           L&apos;essence <br />
           de Jane Do
         </h1>
-        <p className="text-xl font-light leading-7 xl:text-2xl 2xl:text-3xl">
+        <p className="-translate-y-full animate-text-slide-down text-xl font-light leading-7 opacity-0 xl:text-2xl 2xl:text-3xl">
           La volonté de Jane Do c&apos;est <br /> de{" "}
           <Highlighter direction="right" inView={true}>
             vous aider
@@ -33,7 +33,7 @@ export function Hero() {
           href="#discover"
           className={cn(
             buttonVariants({ variant: "gradiant", size: "xl" }),
-            "w-fit justify-self-center md:justify-self-start"
+            "w-fit animate-button-fade-in justify-self-center opacity-0 md:justify-self-start"
           )}
         >
           Découvrir

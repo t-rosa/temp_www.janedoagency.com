@@ -1,5 +1,8 @@
+"use client";
+
 import { buttonVariants } from "@/components/ui/button";
 import brand_values_jpg from "@/images/concept/brand-values.jpg";
+import { useInView } from "react-intersection-observer";
 import brand_values_webp from "@/images/concept/brand-values.webp";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
@@ -7,24 +10,35 @@ import Link from "next/link";
 import { Highlighter } from "@/components/highlighter";
 
 export function Join() {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+  });
+
   return (
-    <section className="relative flex justify-center border md:justify-start">
+    <section className="relative flex justify-center md:justify-start">
       <div
         className="
-            grid min-h-[calc(100vh-5rem)] grid-rows-[1fr_auto_auto] gap-12 border border-red-500  py-24 text-center
+            grid min-h-[calc(100vh-5rem)] grid-rows-[1fr_auto_auto] gap-12 py-24 text-center
             md:ml-24 md:grid-rows-none md:place-content-center md:gap-6 md:text-start
             lg:ml-32
             xl:ml-40
             2xl:ml-48
           "
       >
-        <h2 className="scroll-m-20 text-4xl font-extrabold tracking-tight md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">
+        <h2
+          ref={ref}
+          data-in-view={inView}
+          className="-translate-x-full scroll-m-20 text-4xl font-extrabold tracking-tight opacity-0 data-in-view:animate-title-slide-right md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl"
+        >
           Bâtir <br />
           ensemble
         </h2>
-        <p className="text-xl font-light leading-7 xl:text-2xl 2xl:text-3xl">
+        <p
+          data-in-view={inView}
+          className="-translate-y-full text-xl font-light leading-7 opacity-0 data-in-view:animate-text-slide-down xl:text-2xl 2xl:text-3xl"
+        >
           Chez Jane Do l&apos;écoute, la <br />
-          <Highlighter direction="right" inView={true}>
+          <Highlighter direction="right" inView={inView}>
             proximité et l&apos;inclusivité
           </Highlighter>
           sont <br />
@@ -33,9 +47,10 @@ export function Join() {
         </p>
         <Link
           href="/contact"
+          data-in-view={inView}
           className={cn(
             buttonVariants({ variant: "gradiant", size: "xl" }),
-            "w-fit justify-self-center md:justify-self-start"
+            "w-fit justify-self-center opacity-0 data-in-view:animate-button-fade-in md:justify-self-start"
           )}
         >
           Contactez-nous

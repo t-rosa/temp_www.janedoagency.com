@@ -1,5 +1,3 @@
-"use client";
-
 import { SERVICES, type Service } from "@/lib/services";
 
 import Image from "next/image";
@@ -9,12 +7,15 @@ export function Services() {
   return (
     <div
       className="
-        grid place-items-center overflow-x-hidden border-y bg-zinc-600/10 lg:-mb-32 lg:min-h-[calc(100vh/1.5)]
+        grid place-items-center overflow-x-hidden border-y bg-zinc-600/10 
+        lg:-mb-16 lg:min-h-[calc(100vh/1.5)]
       "
     >
       <ul
         className="
-          my-auto grid w-full place-items-center gap-24 overflow-hidden py-24 sm:grid-cols-2 xl:grid-cols-4
+          my-auto grid w-full place-items-center gap-24 overflow-hidden py-24 
+          sm:grid-cols-2 
+          xl:grid-cols-4
         "
       >
         {SERVICES.map((service) => (
@@ -25,7 +26,7 @@ export function Services() {
   );
 }
 
-const Service = ({ service }: { service: Service }) => {
+function Service({ service }: { service: Service }) {
   return (
     <li data-id={service.id} key={service.label}>
       <Link
@@ -54,4 +55,4 @@ const Service = ({ service }: { service: Service }) => {
       </Link>
     </li>
   );
-};
+}
