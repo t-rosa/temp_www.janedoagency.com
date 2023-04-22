@@ -10,11 +10,13 @@ import { TERMS } from "@/lib/terms";
 import jane_do_svg from "@/images/jane-do.svg";
 import vinyl_png from "@/images/vinyl/vinyl.png";
 import currentVinylLabel from "@/images/vinyl/home.svg";
+import { RadialGradient } from "@/components/radial-gradient";
 
 export default function RootLayout({ children }: PropsWithChildren) {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <>
+    <div className="relative">
+      <RadialGradient />
       <nav
         data-is-open={isOpen}
         className="fixed z-10 grid h-full w-full translate-y-full bg-black data-[is-open='true']:translate-y-0 lg:grid-cols-[55%_45%]"
@@ -23,7 +25,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
           <li>
             <Link
               href="/"
-              className="flex h-full w-full items-center justify-center gap-3 border-b lg:justify-start lg:pl-16 xl:pl-24 2xl:pl-32"
+              className="flex h-full w-full items-center justify-center gap-3 border-b border-muted-foreground lg:justify-start lg:pl-16 xl:pl-24 2xl:pl-32"
             >
               <div className="text-sm text-muted-foreground">01.</div>
               <div>Accueil</div>
@@ -32,7 +34,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
           <li>
             <Link
               href="/concept"
-              className="flex h-full w-full items-center justify-center gap-3 border-b lg:justify-start lg:pl-16 xl:pl-24 2xl:pl-32"
+              className="flex h-full w-full items-center justify-center gap-3 border-b border-muted-foreground lg:justify-start lg:pl-16 xl:pl-24 2xl:pl-32"
             >
               <div className="text-sm text-muted-foreground">02.</div>
               <div>Concept</div>
@@ -41,7 +43,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
           <li>
             <Link
               href="/services"
-              className="flex h-full w-full items-center justify-center gap-3 border-b lg:justify-start lg:pl-16 xl:pl-24 2xl:pl-32"
+              className="flex h-full w-full items-center justify-center gap-3 border-b border-muted-foreground lg:justify-start lg:pl-16 xl:pl-24 2xl:pl-32"
             >
               <div className="text-sm text-muted-foreground">03.</div>
               <div>Services</div>
@@ -50,7 +52,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
           <li>
             <Link
               href="/news"
-              className="flex h-full w-full items-center justify-center gap-3 border-b lg:justify-start lg:pl-16 xl:pl-24 2xl:pl-32"
+              className="flex h-full w-full items-center justify-center gap-3 border-b border-muted-foreground lg:justify-start lg:pl-16 xl:pl-24 2xl:pl-32"
             >
               <div className="text-sm text-muted-foreground">04.</div>
               <div>News</div>
@@ -144,7 +146,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
       <footer
         id="footer"
         className="
-          relative flex flex-col items-center gap-12 border-t px-8 py-12 text-center
+          relative flex flex-col items-center gap-12 border-t bg-background px-8 py-12 text-center
           md:grid md:place-items-center md:text-start
         "
       >
@@ -204,6 +206,6 @@ export default function RootLayout({ children }: PropsWithChildren) {
           &copy; Jane Do - Tous droits réservés
         </p>
       </footer>
-    </>
+    </div>
   );
 }

@@ -16,10 +16,10 @@ export default function HomePage() {
         <div
           className="
             grid min-h-[calc(100vh-5rem)] grid-rows-[1fr_auto_auto] gap-12 border border-red-500 py-24 text-center
-            md:ml-8 md:grid-rows-none md:place-content-center md:gap-6 md:text-start 
-            lg:ml-16
-            xl:ml-24
-            2xl:ml-32
+            md:ml-24 md:grid-rows-none md:place-content-center md:gap-6 md:text-start 
+            lg:ml-32
+            xl:ml-40
+            2xl:ml-48 
           "
         >
           <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight md:text-5xl lg:text-6xl xl:text-7xl">
@@ -67,10 +67,10 @@ export default function HomePage() {
         <div
           className="
             grid min-h-[calc(100vh-5rem)] grid-rows-[1fr_auto] gap-12 border border-red-500 py-24 text-center
-            md:mr-8 md:grid-rows-none md:place-content-center md:gap-6 md:text-end 
-            lg:mr-16
-            xl:mr-24 
-            2xl:mr-32
+            md:mr-24 md:grid-rows-none md:place-content-center md:gap-6 md:text-end 
+            lg:mr-32
+            xl:mr-40
+            2xl:mr-48
           "
         >
           <h2 className="scroll-m-20 text-4xl font-extrabold tracking-tight md:text-5xl lg:text-6xl xl:text-7xl">
@@ -123,10 +123,10 @@ export default function HomePage() {
         <div
           className="
             grid min-h-[calc(100vh-5rem)] grid-rows-[1fr_auto_auto] gap-12 border border-red-500 py-24 text-center
-            md:ml-8 md:grid-rows-none md:place-content-center md:gap-6 md:text-start
-            lg:ml-16
-            xl:ml-24 
-            2xl:ml-32
+            md:ml-24 md:grid-rows-none md:place-content-center md:gap-6 md:text-start
+            lg:ml-32
+            xl:ml-40
+            2xl:ml-48
           "
         >
           <h2 className="scroll-m-20 text-4xl font-extrabold tracking-tight md:text-5xl lg:text-6xl xl:text-7xl">

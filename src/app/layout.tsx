@@ -15,7 +15,7 @@ export const metadata = {
 
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
-    <html lang="fr" className="dark overflow-x-hidden scroll-smooth">
+    <html lang="fr" className="overflow-x-hidden scroll-smooth">
       <body className={poppins.className}>
         {children}
         <TailwindIndicator />
