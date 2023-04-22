@@ -15,14 +15,14 @@ export default function ConceptPage() {
       <section className="relative flex justify-center border-4 md:justify-start">
         <div
           className="
-            grid min-h-[calc(100vh-5rem)] max-w-xs grid-rows-[1fr_auto_auto] gap-12 border border-red-500 px-8 py-24 text-center
-            md:ml-8 md:grid-rows-none md:place-content-center md:gap-6 md:text-start 
-            lg:ml-16 lg:max-w-sm
-            xl:ml-24 
+            grid min-h-[calc(100vh-5rem)] max-w-[19.6rem] grid-rows-[1fr_auto_auto] gap-12 border border-red-500 px-8 py-24 text-center
+            md:ml-8 md:max-w-xs md:grid-rows-none md:place-content-center md:gap-6 md:text-start 
+            lg:ml-16 lg:max-w-md
+            xl:ml-24
             2xl:ml-32
           "
         >
-          <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
+          <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight md:text-5xl lg:text-6xl xl:text-7xl">
             L&apos;essence de Jane Do
           </h1>
           <p className="leading-7 lg:text-lg">
@@ -66,16 +66,16 @@ export default function ConceptPage() {
       >
         <div
           className="
-            grid min-h-[calc(100vh-5rem)] max-w-xs grid-rows-[1fr_auto] gap-12 border border-red-500 px-8 py-24 text-center
-            md:mr-8 md:grid-rows-none md:place-content-center md:gap-6 md:text-end 
-            lg:mr-16 lg:max-w-sm
+            grid min-h-[calc(100vh-5rem)] max-w-[19.6rem] grid-rows-[1fr_auto] gap-12 border border-red-500 px-8 py-24 text-center
+            md:mr-8 md:max-w-xs md:grid-rows-none md:place-content-center md:gap-6 md:text-end 
+            lg:mr-16 lg:max-w-md
             xl:mr-24 
             2xl:mr-32
           "
         >
-          <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
-            Expertise de votre projet
-          </h1>
+          <h2 className="scroll-m-20 text-4xl font-extrabold tracking-tight md:text-5xl lg:text-6xl xl:text-7xl">
+            Expertise
+          </h2>
           <p className="leading-7 lg:text-lg">
             Compétences, conseils et analyse de votre image afin de vous
             proposer une idée précise de votre future communication.
@@ -120,19 +120,20 @@ export default function ConceptPage() {
       <section className="relative flex justify-center border md:justify-start">
         <div
           className="
-            grid min-h-[calc(100vh-5rem)] max-w-xs grid-rows-[1fr_auto_auto] gap-12 border border-red-500 px-8 py-24 text-center
-            md:ml-8 md:grid-rows-none md:place-content-center md:gap-6 md:text-start 
-            lg:ml-16 lg:max-w-sm
+            grid min-h-[calc(100vh-5rem)] max-w-[19.6rem] grid-rows-[1fr_auto_auto] gap-12 border border-red-500 px-8 py-24 text-center
+            md:ml-8 md:max-w-xs md:grid-rows-none md:place-content-center md:gap-6 md:text-start
+            lg:ml-16 lg:max-w-md
             xl:ml-24 
             2xl:ml-32
           "
         >
-          <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
+          <h2 className="scroll-m-20 text-4xl font-extrabold tracking-tight md:text-5xl lg:text-6xl xl:text-7xl">
             Bâtir ensemble
-          </h1>
+          </h2>
           <p className="leading-7 lg:text-lg">
-            L&apos;écoute, la proximité et l&apos;inclusivité sont les mots
-            d&apos;ordre pour chacun des projets que nous entreprenons.
+            Chez Jane Do l&apos;écoute, la proximité et l&apos;inclusivité sont
+            les mots d&apos;ordre pour chacun des projets que nous entreprenons
+            ensemble.
           </p>
           <Link
             href="/contact"

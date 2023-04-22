@@ -22,17 +22,18 @@ export default function ServicePage() {
         <div
           className="
             grid min-h-[calc(100vh-5rem)] max-w-xs grid-rows-[1fr_auto_auto] gap-12 border border-red-500 px-8 py-24 text-center
-            md:ml-8 md:grid-rows-none md:place-content-center md:gap-6 md:text-start 
-            lg:ml-16 lg:max-w-sm
-            xl:ml-24 
+            md:ml-8 md:max-w-sm md:grid-rows-none md:place-content-center md:gap-6 md:text-start 
+            lg:ml-16 lg:max-w-md
+            xl:ml-24 xl:max-w-lg
             2xl:ml-32
           "
         >
-          <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
+          <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight md:text-5xl lg:text-6xl xl:text-7xl">
             Vous avez de l&apos;ambition ?
           </h1>
-          <p className="leading-7 lg:text-lg">
-            Jane Do vous propose différents services adaptée pour vos projets !
+          <p className="leading-7 lg:text-xl xl:text-2xl">
+            Jane Do vous propose différents services adaptée pour développer vos
+            projets !
           </p>
           <a
             href="#discover"
@@ -83,8 +84,7 @@ export default function ServicePage() {
             </h2>
           </div>
           <p className="leading-7 lg:text-lg">
-            Créer, planifier, gérer et optimiser votre stratégie réseaux sociaux
-            de A à Z.
+            Création, planification, gestion et optimisation de vos réseaux.
           </p>
         </div>
         <picture
@@ -117,7 +117,7 @@ export default function ServicePage() {
             2xl:ml-32
           "
         >
-          <div className="flex items-center self-start">
+          <div className="flex items-center self-start md:place-self-start">
             <div className="scroll-m-20 border p-6 text-xl font-extrabold tracking-tight md:text-3xl lg:text-4xl">
               02
             </div>
@@ -239,18 +239,18 @@ export default function ServicePage() {
       <section className="relative flex justify-center border md:justify-end">
         <div
           className="
-            grid min-h-[calc(100vh-5rem)] max-w-xs grid-rows-[1fr_auto] gap-12 border border-red-500 px-8 py-24 text-center
-            md:mr-8 md:grid-rows-none md:place-content-center md:gap-6 md:text-end 
-            lg:mr-16 lg:max-w-sm
+            grid min-h-[calc(100vh-5rem)] max-w-[19.6rem] grid-rows-[1fr_auto] gap-12 border border-red-500 px-8 py-24 text-center
+            md:mr-8 md:max-w-sm md:grid-rows-none md:place-content-center md:gap-6 md:text-end 
+            lg:mr-16 lg:max-w-md
             xl:mr-24 
             2xl:mr-32
           "
         >
-          <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
+          <h2 className="scroll-m-20 text-4xl font-extrabold tracking-tight md:text-5xl lg:text-6xl xl:text-7xl">
             Rejoindre l&apos;aventure
-          </h1>
-          <p className="leading-7 lg:text-lg">
-            Vous avez des questions , des demandes ou un projet à nous faire
+          </h2>
+          <p className="text-xl leading-7 [text-wrap:balance] xl:text-2xl">
+            Vous avez des questions, des demandes ou un projet à nous faire
             découvrir ?
           </p>
           <Link

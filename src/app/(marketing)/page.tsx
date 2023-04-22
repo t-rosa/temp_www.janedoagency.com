@@ -15,19 +15,20 @@ export default function HomePage() {
       <section className="relative flex justify-center border-4 md:justify-start">
         <div
           className="
-          grid min-h-[calc(100vh-5rem)] max-w-xs grid-rows-[1fr_auto_auto] gap-12 border border-red-500 px-8 py-24 text-center
-          md:ml-8 md:grid-rows-none md:place-content-center md:gap-6 md:text-start 
-          lg:ml-16 lg:max-w-sm
-          xl:ml-24 
-          2xl:ml-32
+            grid min-h-[calc(100vh-5rem)] grid-rows-[1fr_auto_auto] gap-12 border border-red-500 px-8 py-24 text-center
+            md:ml-8 md:grid-rows-none md:place-content-center md:gap-6 md:text-start 
+            lg:ml-16
+            xl:ml-24
+            2xl:ml-32
           "
         >
-          <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
-            Partagez votre voix
+          <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight md:text-5xl lg:text-6xl xl:text-7xl">
+            Partagez <br />
+            votre voix
           </h1>
-          <p className="leading-7 lg:text-lg">
-            Découvrez nos services à travers notre site internet ainsi que nos
-            différents réseaux.
+          <p className="text-lg leading-7 lg:text-xl xl:text-2xl">
+            Découvrez nos services à <br /> travers notre site internet ainsi
+            <br /> que nos différents réseaux.
           </p>
           <a
             href="#discover"
@@ -65,19 +66,20 @@ export default function HomePage() {
       >
         <div
           className="
-          grid min-h-[calc(100vh-5rem)] max-w-xs grid-rows-[1fr_auto] gap-12 border border-red-500 px-8 py-24 text-center
-          md:mr-8 md:grid-rows-none md:place-content-center md:gap-6 md:text-end 
-          lg:mr-16 lg:max-w-sm
-          xl:mr-24 
-          2xl:mr-32
+            grid min-h-[calc(100vh-5rem)] grid-rows-[1fr_auto] gap-12 border border-red-500 px-8 py-24 text-center
+            md:mr-8 md:grid-rows-none md:place-content-center md:gap-6 md:text-end 
+            lg:mr-16
+            xl:mr-24 
+            2xl:mr-32
           "
         >
-          <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
-            Découvrez Jane Do
-          </h1>
-          <p className="leading-7 lg:text-lg">
-            Ensemble nous élaborons votre image artistique via une communication
-            adaptée.
+          <h2 className="scroll-m-20 text-4xl font-extrabold tracking-tight md:text-5xl lg:text-6xl xl:text-7xl">
+            Découvrez <br />
+            Jane Do
+          </h2>
+          <p className="text-lg leading-7 lg:text-xl xl:text-2xl">
+            Ensemble nous élaborons votre <br />
+            image artistique via une <br /> communication adaptée.
           </p>
         </div>
         <picture
@@ -120,19 +122,20 @@ export default function HomePage() {
       <section className="relative flex justify-center border md:justify-start">
         <div
           className="
-            grid min-h-[calc(100vh-5rem)] max-w-xs grid-rows-[1fr_auto_auto] gap-12 border border-red-500 px-8 py-24 text-center
-            md:ml-8 md:grid-rows-none md:place-content-center md:gap-6 md:text-start 
-            lg:ml-16 lg:max-w-sm
+            grid min-h-[calc(100vh-5rem)] grid-rows-[1fr_auto_auto] gap-12 border border-red-500 px-8 py-24 text-center
+            md:ml-8 md:grid-rows-none md:place-content-center md:gap-6 md:text-start
+            lg:ml-16
             xl:ml-24 
             2xl:ml-32
           "
         >
-          <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
-            Rejoindre l&apos;aventure
-          </h1>
-          <p className="leading-7 lg:text-lg">
-            Vous avez des questions , des demandes ou un projet à nous faire
-            découvrir ?
+          <h2 className="scroll-m-20 text-4xl font-extrabold tracking-tight md:text-5xl lg:text-6xl xl:text-7xl">
+            Rejoindre <br />
+            l&apos;aventure
+          </h2>
+          <p className="text-lg leading-7 lg:text-xl xl:text-2xl">
+            Vous avez des questions, des <br /> demandes ou un projet ? Nous{" "}
+            <br /> concevons votre stratégie.
           </p>
           <Link
             href="/contact"
