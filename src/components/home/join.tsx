@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import join_jpg from "@/images/home/join.jpg";
 import join_webp from "@/images/home/join.webp";
+import { Highlighter } from "../highlighter";
 
 export function Join() {
   return (
@@ -22,8 +23,11 @@ export function Join() {
           l&apos;aventure
         </h2>
         <p className="text-xl font-light leading-7 xl:text-2xl 2xl:text-3xl">
-          Vous avez des questions, des <br /> demandes ou un projet ? Nous{" "}
-          <br /> concevons votre stratégie.
+          <Highlighter direction="right" inView={true}>
+            Vous avez des questions
+          </Highlighter>
+          , des <br /> demandes ou un projet ? Nous <br /> concevons votre
+          stratégie.
         </p>
         <Link
           href="/contact"

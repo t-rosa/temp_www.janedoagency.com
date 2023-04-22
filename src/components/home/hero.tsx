@@ -2,14 +2,15 @@ import Image from "next/image";
 import hero_jpg from "@/images/home/hero.jpg";
 import hero_webp from "@/images/home/hero.webp";
 import { cn } from "@/lib/utils";
-import { buttonVariants } from "../ui/button";
+import { buttonVariants } from "@/components/ui/button";
+import { Highlighter } from "@/components/highlighter";
 
 export function Hero() {
   return (
     <section className="relative flex justify-center md:justify-start">
       <div
         className="
-            grid min-h-[calc(100vh-5rem)] grid-rows-[1fr_auto_auto] gap-12 border border-red-500 py-24 text-center
+            grid min-h-[calc(100vh-5rem)] grid-rows-[1fr_auto_auto] gap-12 py-24 text-center
             md:ml-24 md:grid-rows-none md:place-content-center md:gap-6 md:text-start 
             lg:ml-32
             xl:ml-40
@@ -21,7 +22,10 @@ export function Hero() {
           votre voix
         </h1>
         <p className="text-xl font-light leading-7 xl:text-2xl 2xl:text-3xl">
-          Découvrez nos services à <br /> travers notre site internet ainsi
+          <Highlighter direction="right" inView={true}>
+            Découvrez nos services
+          </Highlighter>
+          <br />à travers notre site internet ainsi
           <br /> que nos différents réseaux.
         </p>
         <a

@@ -13,6 +13,7 @@ module.exports = {
     data: {
       open: 'open~="true"',
       current: 'current~="true"',
+      "in-view": 'in-view~="true"',
     },
     extend: {
       backgroundImage: {
@@ -78,12 +79,46 @@ module.exports = {
             transform: "translateY(0)",
           },
         },
+        "left-to-right": {
+          from: {
+            top: 0,
+            right: "100%",
+            left: -2,
+            bottom: 0,
+            transform: "skew(-12deg)",
+          },
+          to: {
+            top: 0,
+            right: 0,
+            left: 0,
+            bottom: 0,
+            transform: "skew(-12deg)",
+          },
+        },
+        "right-to-left": {
+          from: {
+            top: 0,
+            right: 0,
+            bottom: 0,
+            left: "100%",
+            transform: "skew(-12deg)",
+          },
+          to: {
+            top: 0,
+            right: 0,
+            bottom: 0,
+            left: 0,
+            transform: "skew(-12deg)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "slide-down": "slide-down 1s ease-out forwards",
         "spin-slow": "spin 10s linear infinite",
+        "highlight-right": "left-to-right .5s ease-in-out 1.5s forwards",
+        "highlight-left": "right-to-left .5s ease-in-out 1.7s forwards",
       },
     },
   },

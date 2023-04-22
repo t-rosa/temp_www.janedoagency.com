@@ -1,6 +1,7 @@
 import Image from "next/image";
 import discover_jpg from "@/images/home/discover.jpg";
 import discover_webp from "@/images/home/discover.webp";
+import { Highlighter } from "../highlighter";
 
 export function Discover() {
   return (
@@ -22,7 +23,10 @@ export function Discover() {
           Jane Do
         </h2>
         <p className="text-xl font-light leading-7 xl:text-2xl 2xl:text-3xl">
-          Ensemble nous élaborons votre <br />
+          <Highlighter direction="left" inView={true}>
+            Ensemble
+          </Highlighter>
+          nous élaborons votre <br />
           image artistique via une <br /> communication adaptée.
         </p>
       </div>
