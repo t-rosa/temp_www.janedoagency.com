@@ -22,7 +22,7 @@ export function Consulting() {
             Consulting
           </h2>
         </div>
-        <p className="text-lg leading-7 lg:text-xl xl:text-2xl">
+        <p className="text-lg font-light leading-7 lg:text-xl xl:text-2xl">
           Besoin d&apos;un avis extérieur ? <br /> Le but est de vous donner une{" "}
           <br /> vision claire de votre stratégie.
         </p>

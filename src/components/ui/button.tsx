@@ -1,10 +1,10 @@
-import * as React from "react";
 import { VariantProps, cva } from "class-variance-authority";
+import * as React from "react";
 
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background",
+  "active:scale-95 inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background",
   {
     variants: {
       variant: {
@@ -18,13 +18,13 @@ const buttonVariants = cva(
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "underline-offset-4 hover:underline text-primary",
         gradiant:
-          "bg-gradient-to-r from-violet/90 to-rose/80 font-semibold text-xl text-primary border border-rose",
+          "bg-gradient-to-r from-violet/90 to-rose/80 font-semibold text-xl text-primary border border-rose hover:border-gold transition-transform duration-300 hover:scale-105",
       },
       size: {
         default: "h-10 py-2 px-4",
         sm: "h-9 px-3 rounded-md",
         lg: "h-11 px-8 rounded-md",
-        xl: "h-12 px-12 rounded-full",
+        xl: "py-3 px-12 rounded-full xl:text-2xl 2xl:py-4 2xl:px-14",
       },
     },
     defaultVariants: {

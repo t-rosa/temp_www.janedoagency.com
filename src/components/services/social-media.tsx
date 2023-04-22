@@ -6,6 +6,7 @@ export function SocialMedia() {
   return (
     <section className="relative flex justify-center md:justify-end">
       <div
+        id="social-media"
         className="
             grid min-h-[calc(100vh-5rem)] grid-rows-[1fr_auto] gap-12 border border-red-500  py-24 text-center
             md:mr-24 md:grid-rows-none md:content-center md:gap-6 md:text-end 
@@ -22,7 +23,7 @@ export function SocialMedia() {
             Social Media
           </h2>
         </div>
-        <p className="text-lg leading-7 lg:text-xl xl:text-2xl">
+        <p className="text-lg font-light leading-7 lg:text-xl xl:text-2xl">
           Création, planification, gestion <br /> et optimisation de vos
           réseaux.
         </p>

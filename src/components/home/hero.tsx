@@ -16,11 +16,11 @@ export function Hero() {
             2xl:ml-48 
           "
       >
-        <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight md:text-5xl lg:text-6xl xl:text-7xl">
+        <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">
           Partagez <br />
           votre voix
         </h1>
-        <p className="text-lg leading-7 lg:text-xl xl:text-2xl">
+        <p className="text-xl font-light leading-7 xl:text-2xl 2xl:text-3xl">
           Découvrez nos services à <br /> travers notre site internet ainsi
           <br /> que nos différents réseaux.
         </p>
@@ -28,7 +28,7 @@ export function Hero() {
           href="#discover"
           className={cn(
             buttonVariants({ variant: "gradiant", size: "xl" }),
-            "w-fit justify-self-center md:justify-self-start"
+            "w-fit justify-self-center  md:justify-self-start"
           )}
         >
           Découvrir

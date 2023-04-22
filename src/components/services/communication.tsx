@@ -22,7 +22,7 @@ export function Communication() {
             Communication
           </h2>
         </div>
-        <p className="text-lg leading-7 lg:text-xl xl:text-2xl">
+        <p className="text-lg font-light leading-7 lg:text-xl xl:text-2xl">
           Création, planification, gestion <br /> et optimisation de vos
           réseaux.
         </p>

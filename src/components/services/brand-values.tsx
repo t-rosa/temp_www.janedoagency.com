@@ -22,7 +22,7 @@ export function BrandValues() {
             Brand Values
           </h2>
         </div>
-        <p className="text-lg leading-7 lg:text-xl xl:text-2xl">
+        <p className="text-lg font-light leading-7 lg:text-xl xl:text-2xl">
           Charte graphique, logo une <br /> identité forte pour faire adhérer
           <br /> vos cibles à votre univers !
         </p>

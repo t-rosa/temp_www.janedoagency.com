@@ -17,11 +17,11 @@ export function Join() {
             2xl:ml-48
           "
       >
-        <h2 className="scroll-m-20 text-4xl font-extrabold tracking-tight md:text-5xl lg:text-6xl xl:text-7xl">
+        <h2 className="scroll-m-20 text-4xl font-extrabold tracking-tight md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">
           Rejoindre <br />
           l&apos;aventure
         </h2>
-        <p className="text-lg leading-7 lg:text-xl xl:text-2xl">
+        <p className="text-xl font-light leading-7 xl:text-2xl 2xl:text-3xl">
           Vous avez des questions, des <br /> demandes ou un projet ? Nous{" "}
           <br /> concevons votre stratégie.
         </p>

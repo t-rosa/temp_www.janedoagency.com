@@ -16,16 +16,16 @@ export function Hero() {
             2xl:ml-48 
           "
       >
-        <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight md:text-5xl lg:text-6xl xl:text-7xl">
+        <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">
           Vous avez <br />
           des projets ?
         </h1>
-        <p className="text-lg leading-7 lg:text-xl xl:text-2xl">
+        <p className="text-xl font-light leading-7 xl:text-2xl 2xl:text-3xl">
           Jane Do vous propose <br /> différents services adaptée pour <br />{" "}
           développer vos projets !
         </p>
         <a
-          href="#discover"
+          href="#social-media"
           className={cn(
             buttonVariants({ variant: "gradiant", size: "xl" }),
             "w-fit justify-self-center md:justify-self-start"

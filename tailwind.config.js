@@ -26,6 +26,7 @@ module.exports = {
         foreground: "hsl(var(--foreground))",
         violet: "hsl(var(--violet))",
         rose: "hsl(var(--rose))",
+        gold: "hsl(var(--gold))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
