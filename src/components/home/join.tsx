@@ -1,13 +1,13 @@
 "use client";
 
 import { buttonVariants } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
-import Link from "next/link";
-import Image from "next/image";
 import join_jpg from "@/images/home/join.jpg";
 import join_webp from "@/images/home/join.webp";
-import { Highlighter } from "../highlighter";
+import { cn } from "@/lib/utils";
+import Image from "next/image";
+import Link from "next/link";
 import { useInView } from "react-intersection-observer";
+import { Highlighter } from "../highlighter";
 
 export function Join() {
   const { ref, inView } = useInView({
@@ -28,14 +28,26 @@ export function Join() {
         <h2
           ref={ref}
           data-in-view={inView}
-          className="-translate-x-full scroll-m-20 text-4xl font-extrabold tracking-tight opacity-0 data-in-view:animate-title-slide-right md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl"
+          className="
+            scroll-m-20 text-4xl font-extrabold tracking-tight opacity-0 
+            data-in-view:animate-title-slide-right 
+            md:text-5xl 
+            lg:text-6xl 
+            xl:text-7xl 
+            2xl:text-8xl
+          "
         >
           Rejoindre <br />
           l&apos;aventure
         </h2>
         <p
           data-in-view={inView}
-          className="-translate-y-full text-xl font-light leading-7 opacity-0 data-in-view:animate-text-slide-down xl:text-2xl 2xl:text-3xl"
+          className="
+            text-xl font-light leading-7 opacity-0 
+            data-in-view:animate-text-slide-down 
+            xl:text-2xl 
+            2xl:text-3xl
+          "
         >
           <Highlighter direction="right" inView={inView}>
             Vous avez des questions

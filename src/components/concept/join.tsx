@@ -28,14 +28,26 @@ export function Join() {
         <h2
           ref={ref}
           data-in-view={inView}
-          className="-translate-x-full scroll-m-20 text-4xl font-extrabold tracking-tight opacity-0 data-in-view:animate-title-slide-right md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl"
+          className="
+            scroll-m-20 text-4xl font-extrabold tracking-tight opacity-0 
+            data-in-view:animate-title-slide-right 
+            md:text-5xl 
+            lg:text-6xl 
+            xl:text-7xl 
+            2xl:text-8xl
+          "
         >
           Bâtir <br />
           ensemble
         </h2>
         <p
           data-in-view={inView}
-          className="-translate-y-full text-xl font-light leading-7 opacity-0 data-in-view:animate-text-slide-down xl:text-2xl 2xl:text-3xl"
+          className="
+            text-xl font-light leading-7 opacity-0 
+            data-in-view:animate-text-slide-down 
+            xl:text-2xl 
+            2xl:text-3xl
+          "
         >
           Chez Jane Do l&apos;écoute, la <br />
           <Highlighter direction="right" inView={inView}>

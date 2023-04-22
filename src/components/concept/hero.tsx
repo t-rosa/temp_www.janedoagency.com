@@ -17,11 +17,25 @@ export function Hero() {
             2xl:ml-48 
           "
       >
-        <h1 className="-translate-x-full animate-title-slide-right scroll-m-20 text-4xl font-extrabold tracking-tight opacity-0 md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">
+        <h1
+          className="
+              animate-title-slide-right scroll-m-20 text-4xl font-extrabold tracking-tight opacity-0 
+              md:text-5xl 
+              lg:text-6xl 
+              xl:text-7xl 
+              2xl:text-8xl
+            "
+        >
           L&apos;essence <br />
           de Jane Do
         </h1>
-        <p className="-translate-y-full animate-text-slide-down text-xl font-light leading-7 opacity-0 xl:text-2xl 2xl:text-3xl">
+        <p
+          className="
+            animate-text-slide-down text-xl font-light leading-7 opacity-0 
+            xl:text-2xl 
+            2xl:text-3xl
+          "
+        >
           La volonté de Jane Do c&apos;est <br /> de{" "}
           <Highlighter direction="right" inView={true}>
             vous aider
@@ -40,11 +54,12 @@ export function Hero() {
         </a>
       </div>
       <picture
-        className="pointer-events-none absolute inset-y-0 w-full mix-blend-lighten 
-            md:right-0 md:-mb-24 md:w-[30rem]
-            xl:w-[34rem] 
-            2xl:w-[38rem]
-          "
+        className="
+          pointer-events-none absolute inset-y-0 w-full mix-blend-lighten 
+          md:right-0 md:-mb-24 md:w-[30rem]
+          xl:w-[34rem] 
+          2xl:w-[38rem]
+        "
       >
         <source srcSet={hero_webp.src} type="image/webp" />
         <Image
