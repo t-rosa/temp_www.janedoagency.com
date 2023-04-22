@@ -21,19 +21,20 @@ export default function ServicePage() {
       <section className="relative flex justify-center md:justify-start">
         <div
           className="
-            grid min-h-[calc(100vh-5rem)] max-w-xs grid-rows-[1fr_auto_auto] gap-12 border border-red-500 px-8 py-24 text-center
-            md:ml-8 md:max-w-sm md:grid-rows-none md:place-content-center md:gap-6 md:text-start 
-            lg:ml-16 lg:max-w-md
-            xl:ml-24 xl:max-w-lg
+            grid min-h-[calc(100vh-5rem)] grid-rows-[1fr_auto_auto] gap-12 border border-red-500  py-24 text-center
+            md:ml-8 md:grid-rows-none md:content-center md:gap-6 md:text-start 
+            lg:ml-16
+            xl:ml-24
             2xl:ml-32
           "
         >
           <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight md:text-5xl lg:text-6xl xl:text-7xl">
-            Vous avez de l&apos;ambition ?
+            Vous avez <br />
+            des projets ?
           </h1>
-          <p className="leading-7 lg:text-xl xl:text-2xl">
-            Jane Do vous propose différents services adaptée pour développer vos
-            projets !
+          <p className="text-lg leading-7 lg:text-xl xl:text-2xl">
+            Jane Do vous propose <br /> différents services adaptée pour <br />{" "}
+            développer vos projets !
           </p>
           <a
             href="#discover"
@@ -47,8 +48,8 @@ export default function ServicePage() {
         </div>
         <picture
           className="
-            pointer-events-none absolute inset-y-0 right-0 -z-10 w-screen mix-blend-lighten 
-            md:-mb-5 md:w-[36rem] xl:w-[40rem] 2xl:w-[44rem]
+            pointer-events-none absolute inset-y-0 -z-10 w-full mix-blend-lighten 
+            md:right-0 md:-mb-5 md:w-[36rem] xl:w-[40rem] 2xl:w-[44rem]
           "
         >
           <source srcSet={hero_webp.src} type="image/webp" />
@@ -65,17 +66,17 @@ export default function ServicePage() {
         </picture>
       </section>
 
-      <section className="relative flex justify-center border md:justify-end">
+      <section className="relative flex justify-center md:justify-end">
         <div
           className="
-            grid min-h-[calc(100vh-5rem)] max-w-xs grid-rows-[1fr_auto] justify-items-center gap-12 border border-red-500 px-8 py-24 text-center
-            md:mr-8 md:max-w-md md:grid-rows-none md:place-content-center md:gap-6 md:text-end 
-            lg:mr-16 lg:max-w-lg
+            grid min-h-[calc(100vh-5rem)] grid-rows-[1fr_auto] gap-12 border border-red-500  py-24 text-center
+            md:mr-8 md:grid-rows-none md:content-center md:gap-6 md:text-end 
+            lg:mr-16
             xl:mr-24 
             2xl:mr-32
           "
         >
-          <div className="flex items-center self-start md:place-self-end">
+          <div className="flex self-start md:self-auto">
             <div className="scroll-m-20 border p-6 text-xl font-extrabold tracking-tight md:text-3xl lg:text-4xl">
               01
             </div>
@@ -83,14 +84,15 @@ export default function ServicePage() {
               Social Media
             </h2>
           </div>
-          <p className="leading-7 lg:text-lg">
-            Création, planification, gestion et optimisation de vos réseaux.
+          <p className="text-lg leading-7 lg:text-xl xl:text-2xl">
+            Création, planification, gestion <br /> et optimisation de vos
+            réseaux.
           </p>
         </div>
         <picture
           className="
-            pointer-events-none absolute inset-y-0 left-0 -z-10 h-auto w-screen mix-blend-lighten 
-            md:w-[30rem] xl:w-[34rem] 2xl:w-[38rem]
+            pointer-events-none absolute inset-y-0 -z-10 w-full mix-blend-lighten
+            md:left-0 md:w-[30rem] xl:w-[34rem] 2xl:w-[38rem]
           "
         >
           <source srcSet={social_media_webp.src} type="image/webp" />
@@ -106,18 +108,17 @@ export default function ServicePage() {
           <div className="absolute -inset-1 bg-gradient-to-t from-background via-transparent to-background md:rounded-t-full" />
         </picture>
       </section>
-
-      <section className="relative flex justify-center border md:justify-start">
+      <section className="relative flex justify-center md:justify-start">
         <div
           className="
-            grid min-h-[calc(100vh-5rem)] max-w-xs grid-rows-[1fr_auto] justify-items-center gap-12 border border-red-500 px-4 py-24 text-center md:ml-8
-            md:max-w-md md:grid-rows-none md:place-content-center md:gap-6 md:px-8 md:text-start 
-            lg:ml-16 lg:max-w-lg
+            grid min-h-[calc(100vh-5rem)] grid-rows-[1fr_auto] gap-12 border border-red-500  py-24 text-center
+            md:ml-8 md:grid-rows-none md:content-center md:gap-6 md:text-start 
+            lg:ml-16
             xl:ml-24 
             2xl:ml-32
           "
         >
-          <div className="flex items-center self-start md:place-self-start">
+          <div className="flex self-start md:self-auto">
             <div className="scroll-m-20 border p-6 text-xl font-extrabold tracking-tight md:text-3xl lg:text-4xl">
               02
             </div>
@@ -125,21 +126,21 @@ export default function ServicePage() {
               Communication
             </h2>
           </div>
-          <p className="px-4 leading-7 md:px-0 lg:text-lg">
-            Élaborer votre communication, Jane Do vous permet d’accéder à son
-            réseau.
+          <p className="text-lg leading-7 lg:text-xl xl:text-2xl">
+            Création, planification, gestion <br /> et optimisation de vos
+            réseaux.
           </p>
         </div>
         <picture
           className="
-            pointer-events-none absolute inset-y-0 right-0 -z-10 h-auto w-screen mix-blend-lighten 
-            md:w-[30rem] xl:w-[34rem] 2xl:w-[38rem]
+            pointer-events-none absolute inset-y-0 -z-10 w-full mix-blend-lighten
+            md:right-0 md:w-[30rem] xl:w-[34rem] 2xl:w-[38rem]
           "
         >
           <source srcSet={communication_webp.src} type="image/webp" />
           <Image
             src={communication_jpg}
-            alt="Chanteur"
+            alt="Cadreur"
             sizes="(min-width: 768px) 30rem, (min-width: 1280px) 34rem, (min-width: 1536px) 38rem, 100vw"
             fill
             priority
@@ -150,17 +151,17 @@ export default function ServicePage() {
         </picture>
       </section>
 
-      <section className="relative flex justify-center border md:justify-end">
+      <section className="relative flex justify-center md:justify-end">
         <div
           className="
-            grid min-h-[calc(100vh-5rem)] max-w-xs grid-rows-[1fr_auto] justify-items-center gap-12 border border-red-500 px-4 py-24 text-center
-            md:mr-8 md:max-w-md md:grid-rows-none md:place-content-center md:gap-6 md:text-end 
-            lg:mr-16 lg:max-w-lg
+            grid min-h-[calc(100vh-5rem)] grid-rows-[1fr_auto] gap-12 border border-red-500  py-24 text-center
+            md:mr-8 md:grid-rows-none md:content-center md:gap-6 md:text-end 
+            lg:mr-16
             xl:mr-24 
             2xl:mr-32
           "
         >
-          <div className="flex items-center self-start md:place-self-end">
+          <div className="flex self-start md:self-auto">
             <div className="scroll-m-20 border p-6 text-xl font-extrabold tracking-tight md:text-3xl lg:text-4xl">
               03
             </div>
@@ -168,15 +169,15 @@ export default function ServicePage() {
               Brand Values
             </h2>
           </div>
-          <p className="px-4 leading-7 md:px-0 lg:text-lg">
-            Charte graphique, logo une identité forte pour faire adhérer vos
-            cibles à votre univers !
+          <p className="text-lg leading-7 lg:text-xl xl:text-2xl">
+            Charte graphique, logo une <br /> identité forte pour faire adhérer
+            <br /> vos cibles à votre univers !
           </p>
         </div>
         <picture
           className="
-            pointer-events-none absolute inset-y-0 left-0 -z-10 h-auto w-screen 
-            mix-blend-lighten md:w-[30rem] xl:w-[34rem] 2xl:w-[38rem]
+            pointer-events-none absolute inset-y-0 -z-10 w-full overflow-x-hidden
+            mix-blend-lighten md:left-0 md:w-[30rem] xl:w-[34rem] 2xl:w-[38rem]
           "
         >
           <source srcSet={brand_values_webp.src} type="image/webp" />
@@ -193,17 +194,17 @@ export default function ServicePage() {
         </picture>
       </section>
 
-      <section className="relative flex justify-center border md:justify-start">
+      <section className="relative flex justify-center md:justify-start">
         <div
           className="
-            grid min-h-[calc(100vh-5rem)] max-w-xs grid-rows-[1fr_auto] justify-items-center gap-12 border border-red-500 px-4 py-24 text-center md:ml-8
-            md:max-w-md md:grid-rows-none md:place-content-center md:gap-6 md:px-8 md:text-start 
-            lg:ml-16 lg:max-w-lg
+            grid min-h-[calc(100vh-5rem)] grid-rows-[1fr_auto] gap-12 border border-red-500  py-24 text-center
+            md:ml-8 md:grid-rows-none md:content-center md:gap-6 md:text-start 
+            lg:ml-16
             xl:ml-24 
             2xl:ml-32
           "
         >
-          <div className="flex items-center self-start md:place-self-start">
+          <div className="flex self-start md:self-auto">
             <div className="scroll-m-20 border p-6 text-xl font-extrabold tracking-tight md:text-3xl lg:text-4xl">
               04
             </div>
@@ -211,21 +212,21 @@ export default function ServicePage() {
               Consulting
             </h2>
           </div>
-          <p className="px-4 leading-7 md:px-0 lg:text-lg">
-            Besoin d’un avis extérieur ? Le but est de vous donner une vision
-            claire de votre stratégie.
+          <p className="text-lg leading-7 lg:text-xl xl:text-2xl">
+            Besoin d&apos;un avis extérieur ? <br /> Le but est de vous donner
+            une <br /> vision claire de votre stratégie.
           </p>
         </div>
         <picture
           className="
-            pointer-events-none absolute inset-y-0 right-0 -z-10 h-auto w-screen mix-blend-lighten 
-            md:w-[30rem] xl:w-[34rem] 2xl:w-[38rem]
+            pointer-events-none absolute inset-y-0 -z-10 w-full mix-blend-lighten
+            md:right-0 md:w-[30rem] xl:w-[34rem] 2xl:w-[38rem]
           "
         >
           <source srcSet={consulting_webp.src} type="image/webp" />
           <Image
             src={consulting_jpg}
-            alt="Chanteur"
+            alt="Cadreur"
             sizes="(min-width: 768px) 30rem, (min-width: 1280px) 34rem, (min-width: 1536px) 38rem, 100vw"
             fill
             priority
@@ -236,22 +237,23 @@ export default function ServicePage() {
         </picture>
       </section>
 
-      <section className="relative flex justify-center border md:justify-end">
+      <section className="relative flex justify-center md:justify-end">
         <div
           className="
-            grid min-h-[calc(100vh-5rem)] max-w-[19.6rem] grid-rows-[1fr_auto] gap-12 border border-red-500 px-8 py-24 text-center
-            md:mr-8 md:max-w-sm md:grid-rows-none md:place-content-center md:gap-6 md:text-end 
-            lg:mr-16 lg:max-w-md
+            grid min-h-[calc(100vh-5rem)] grid-rows-[1fr_auto] gap-12 border border-red-500  py-24 text-center
+            md:mr-8 md:grid-rows-none md:place-content-center md:gap-6 md:text-end 
+            lg:mr-16
             xl:mr-24 
             2xl:mr-32
           "
         >
           <h2 className="scroll-m-20 text-4xl font-extrabold tracking-tight md:text-5xl lg:text-6xl xl:text-7xl">
-            Rejoindre l&apos;aventure
+            Rejoindre <br /> l&apos;aventure
           </h2>
-          <p className="text-xl leading-7 [text-wrap:balance] xl:text-2xl">
-            Vous avez des questions, des demandes ou un projet à nous faire
-            découvrir ?
+          <p className="text-lg leading-7 lg:text-xl xl:text-2xl">
+            Vous avez des questions, des <br /> demandes ou un projet à nous{" "}
+            <br />
+            faire découvrir ?
           </p>
           <Link
             href="/contact"
@@ -265,8 +267,8 @@ export default function ServicePage() {
         </div>
         <picture
           className="
-            pointer-events-none absolute inset-y-0 left-0 -z-10 h-auto w-screen mix-blend-lighten 
-            md:w-[30rem] xl:w-[34rem] 2xl:w-[38rem]
+            pointer-events-none absolute inset-y-0 -z-10 w-full mix-blend-lighten 
+            md:left-0 md:w-[30rem] xl:w-[34rem] 2xl:w-[38rem]
           "
         >
           <source srcSet={join_webp.src} type="image/webp" />

@@ -12,22 +12,23 @@ import brand_values_webp from "@/images/concept/brand-values.webp";
 export default function ConceptPage() {
   return (
     <>
-      <section className="relative flex justify-center border-4 md:justify-start">
+      <section className="relative flex justify-center md:justify-start">
         <div
           className="
-            grid min-h-[calc(100vh-5rem)] max-w-[19.6rem] grid-rows-[1fr_auto_auto] gap-12 border border-red-500 px-8 py-24 text-center
-            md:ml-8 md:max-w-xs md:grid-rows-none md:place-content-center md:gap-6 md:text-start 
-            lg:ml-16 lg:max-w-md
+            grid min-h-[calc(100vh-5rem)] grid-rows-[1fr_auto_auto] gap-12 border border-red-500  py-24 text-center
+            md:ml-8 md:grid-rows-none md:place-content-center md:gap-6 md:text-start 
+            lg:ml-16
             xl:ml-24
             2xl:ml-32
           "
         >
           <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight md:text-5xl lg:text-6xl xl:text-7xl">
-            L&apos;essence de Jane Do
+            L&apos;essence <br />
+            de Jane Do
           </h1>
-          <p className="leading-7 lg:text-lg">
-            La volonté de Jane Do c&apos;est de vous aider dans le développement
-            de votre univers artistique.
+          <p className="text-lg leading-7 lg:text-xl xl:text-2xl">
+            La volonté de Jane Do c&apos;est <br /> de vous aider dans le <br />
+            développement de votre <br /> univers artistique.
           </p>
           <a
             href="#discover"
@@ -40,8 +41,8 @@ export default function ConceptPage() {
           </a>
         </div>
         <picture
-          className="pointer-events-none absolute inset-y-0 right-0 -z-10 w-screen mix-blend-lighten 
-            md:-mb-24 md:w-[30rem] 
+          className="pointer-events-none absolute inset-y-0 -z-10 w-full mix-blend-lighten 
+            md:right-0 md:-mb-24 md:w-[30rem]
             xl:w-[34rem] 
             2xl:w-[38rem]
           "
@@ -66,25 +67,26 @@ export default function ConceptPage() {
       >
         <div
           className="
-            grid min-h-[calc(100vh-5rem)] max-w-[19.6rem] grid-rows-[1fr_auto] gap-12 border border-red-500 px-8 py-24 text-center
-            md:mr-8 md:max-w-xs md:grid-rows-none md:place-content-center md:gap-6 md:text-end 
-            lg:mr-16 lg:max-w-md
+            grid min-h-[calc(100vh-5rem)] grid-rows-[1fr_auto] gap-12 border border-red-500  py-24 text-center
+            md:mr-8 md:grid-rows-none md:place-content-center md:gap-6 md:text-end 
+            lg:mr-16
             xl:mr-24 
             2xl:mr-32
           "
         >
           <h2 className="scroll-m-20 text-4xl font-extrabold tracking-tight md:text-5xl lg:text-6xl xl:text-7xl">
-            Expertise
+            Expertise <br /> de projets
           </h2>
-          <p className="leading-7 lg:text-lg">
-            Compétences, conseils et analyse de votre image afin de vous
-            proposer une idée précise de votre future communication.
+          <p className="text-lg leading-7 lg:text-xl xl:text-2xl">
+            Compétences, conseils et <br /> analyse de votre image afin de
+            <br /> vous proposer une idée précise <br /> de votre future
+            communication.
           </p>
         </div>
         <picture
           className="
-            pointer-events-none absolute inset-y-0 left-0 -z-10 h-auto w-screen mix-blend-lighten 
-            md:-mb-24 md:w-[30rem] 
+            pointer-events-none absolute inset-y-0 -z-10 w-full mix-blend-lighten
+            md:left-0 md:-mb-24 md:w-[30rem]
             xl:w-[34rem] 
             2xl:w-[38rem]
           "
@@ -105,7 +107,7 @@ export default function ConceptPage() {
 
       <section
         className="
-          grid w-full place-items-center gap-12 border border-red-500 px-8 py-24 text-center
+          grid w-full place-items-center gap-12 border border-red-500  py-24 text-center
           md:grid-cols-2
           lg:grid-cols-4 lg:px-16
           xl:px-24
@@ -120,20 +122,22 @@ export default function ConceptPage() {
       <section className="relative flex justify-center border md:justify-start">
         <div
           className="
-            grid min-h-[calc(100vh-5rem)] max-w-[19.6rem] grid-rows-[1fr_auto_auto] gap-12 border border-red-500 px-8 py-24 text-center
-            md:ml-8 md:max-w-xs md:grid-rows-none md:place-content-center md:gap-6 md:text-start
-            lg:ml-16 lg:max-w-md
+            grid min-h-[calc(100vh-5rem)] grid-rows-[1fr_auto_auto] gap-12 border border-red-500  py-24 text-center
+            md:ml-8 md:grid-rows-none md:place-content-center md:gap-6 md:text-start
+            lg:ml-16
             xl:ml-24 
             2xl:ml-32
           "
         >
           <h2 className="scroll-m-20 text-4xl font-extrabold tracking-tight md:text-5xl lg:text-6xl xl:text-7xl">
-            Bâtir ensemble
+            Bâtir <br />
+            ensemble
           </h2>
-          <p className="leading-7 lg:text-lg">
-            Chez Jane Do l&apos;écoute, la proximité et l&apos;inclusivité sont
-            les mots d&apos;ordre pour chacun des projets que nous entreprenons
-            ensemble.
+          <p className="text-lg leading-7 lg:text-xl xl:text-2xl">
+            Chez Jane Do l&apos;écoute, la <br /> proximité et
+            l&apos;inclusivité sont <br />
+            les mots d&apos;ordre pour chacun <br /> des projets que nous <br />
+            entreprenons ensemble.
           </p>
           <Link
             href="/contact"
@@ -147,8 +151,8 @@ export default function ConceptPage() {
         </div>
         <picture
           className="
-            pointer-events-none absolute inset-y-0 right-0 -z-10 h-auto w-screen mix-blend-lighten 
-            md:w-[30rem] xl:w-[34rem] 2xl:w-[38rem]
+            pointer-events-none absolute inset-y-0 -z-10 w-full mix-blend-lighten 
+            md:right-0 md:w-[30rem] xl:w-[34rem] 2xl:w-[38rem]
           "
         >
           <source srcSet={brand_values_webp.src} type="image/webp" />

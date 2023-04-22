@@ -12,10 +12,10 @@ import join_webp from "@/images/home/join.webp";
 export default function HomePage() {
   return (
     <>
-      <section className="relative flex justify-center border-4 md:justify-start">
+      <section className="relative flex justify-center md:justify-start">
         <div
           className="
-            grid min-h-[calc(100vh-5rem)] grid-rows-[1fr_auto_auto] gap-12 border border-red-500 px-8 py-24 text-center
+            grid min-h-[calc(100vh-5rem)] grid-rows-[1fr_auto_auto] gap-12 border border-red-500 py-24 text-center
             md:ml-8 md:grid-rows-none md:place-content-center md:gap-6 md:text-start 
             lg:ml-16
             xl:ml-24
@@ -42,8 +42,8 @@ export default function HomePage() {
         </div>
         <picture
           className="
-            pointer-events-none absolute inset-y-0 right-0 -z-10 w-screen mix-blend-lighten 
-            md:-mb-24 md:w-[36rem] lg:w-[44rem]
+            pointer-events-none absolute inset-y-0 -z-10 w-full mix-blend-lighten
+            md:right-0 md:-mb-24 md:w-[36rem] lg:w-[44rem]
           "
         >
           <source srcSet={hero_webp.src} type="image/webp" />
@@ -66,7 +66,7 @@ export default function HomePage() {
       >
         <div
           className="
-            grid min-h-[calc(100vh-5rem)] grid-rows-[1fr_auto] gap-12 border border-red-500 px-8 py-24 text-center
+            grid min-h-[calc(100vh-5rem)] grid-rows-[1fr_auto] gap-12 border border-red-500 py-24 text-center
             md:mr-8 md:grid-rows-none md:place-content-center md:gap-6 md:text-end 
             lg:mr-16
             xl:mr-24 
@@ -84,8 +84,8 @@ export default function HomePage() {
         </div>
         <picture
           className="
-            pointer-events-none absolute inset-y-0 left-0 -z-10 h-auto w-screen mix-blend-lighten 
-            md:-mb-24 md:w-[30rem] 
+            pointer-events-none absolute inset-y-0 -z-10 w-full mix-blend-lighten 
+            md:left-0 md:-mb-24 md:w-[30rem]
             xl:w-[34rem] 
             2xl:w-[38rem]
           "
@@ -106,7 +106,7 @@ export default function HomePage() {
 
       <section
         className="
-          grid w-full place-items-center gap-12 border border-red-500 px-8 py-24 text-center
+          grid w-full place-items-center gap-12 border border-red-500 py-24 text-center
           md:grid-cols-2
           lg:grid-cols-4 lg:px-16
           xl:px-24
@@ -122,7 +122,7 @@ export default function HomePage() {
       <section className="relative flex justify-center border md:justify-start">
         <div
           className="
-            grid min-h-[calc(100vh-5rem)] grid-rows-[1fr_auto_auto] gap-12 border border-red-500 px-8 py-24 text-center
+            grid min-h-[calc(100vh-5rem)] grid-rows-[1fr_auto_auto] gap-12 border border-red-500 py-24 text-center
             md:ml-8 md:grid-rows-none md:place-content-center md:gap-6 md:text-start
             lg:ml-16
             xl:ml-24 
@@ -149,8 +149,8 @@ export default function HomePage() {
         </div>
         <picture
           className="
-            pointer-events-none absolute inset-y-0 right-0 -z-10 h-auto w-screen mix-blend-lighten 
-            md:w-[30rem] xl:w-[34rem] 2xl:w-[38rem]
+            pointer-events-none absolute inset-y-0 -z-10 w-full mix-blend-lighten 
+            md:right-0 md:w-[30rem] xl:w-[34rem] 2xl:w-[38rem]
           "
         >
           <source srcSet={join_webp.src} type="image/webp" />
