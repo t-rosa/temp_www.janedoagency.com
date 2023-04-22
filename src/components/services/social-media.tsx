@@ -1,31 +1,45 @@
+"use client";
+
 import social_media_jpg from "@/images/services/social-media.jpg";
 import social_media_webp from "@/images/services/social-media.webp";
 import Image from "next/image";
+import { useInView } from "react-intersection-observer";
 import { Highlighter } from "../highlighter";
 
 export function SocialMedia() {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+  });
+
   return (
     <section className="relative flex justify-center md:justify-end">
       <div
         id="social-media"
         className="
-            grid min-h-[calc(100vh-5rem)] grid-rows-[1fr_auto] gap-12 border border-red-500  py-24 text-center
-            md:mr-24 md:grid-rows-none md:content-center md:gap-6 md:text-end 
+            grid min-h-[calc(100vh-5rem)] grid-rows-[1fr_auto] gap-12 py-24 text-center
+            md:mr-24 md:grid-rows-none md:content-center md:gap-6 md:text-end
             lg:mr-32
             xl:mr-40
             2xl:mr-48 
           "
       >
-        <div className="flex self-start md:self-auto">
+        <div
+          ref={ref}
+          data-in-view={inView}
+          className="flex opacity-0 data-in-view:animate-title-slide-left"
+        >
           <div className="scroll-m-20 border p-6 text-xl font-extrabold tracking-tight md:text-3xl lg:text-4xl">
             01
           </div>
-          <h2 className="scroll-m-20 border border-l-0 p-6 text-xl font-extrabold tracking-tight md:text-3xl lg:text-4xl">
+          <h2 className="w-full scroll-m-20 border border-l-0 p-6 text-xl font-extrabold tracking-tight md:text-3xl lg:text-4xl">
             Social Media
           </h2>
         </div>
-        <p className="text-lg font-light leading-7 lg:text-xl xl:text-2xl">
-          <Highlighter direction="left" inView>
+        <p
+          data-in-view={inView}
+          className="text-lg font-light leading-7 opacity-0 data-in-view:animate-text-slide-down lg:text-xl xl:text-2xl"
+        >
+          <Highlighter direction="left" inView={inView}>
             Création, planification
           </Highlighter>
           , gestion <br /> et optimisation de vos réseaux.

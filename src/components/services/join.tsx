@@ -1,3 +1,5 @@
+"use client";
+
 import { buttonVariants } from "@/components/ui/button";
 import join_jpg from "@/images/home/join.jpg";
 import join_webp from "@/images/home/join.webp";
@@ -5,24 +7,46 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import { Highlighter } from "../highlighter";
+import { useInView } from "react-intersection-observer";
 
 export function Join() {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+  });
+
   return (
     <section className="relative flex justify-center md:justify-end">
       <div
         className="
-            grid min-h-[calc(100vh-5rem)] grid-rows-[1fr_auto] gap-12 border border-red-500  py-24 text-center
+            grid min-h-[calc(100vh-5rem)] grid-rows-[1fr_auto] gap-12 py-24 text-center
             md:mr-24 md:grid-rows-none md:place-content-center md:gap-6 md:text-end 
             lg:mr-32
             xl:mr-40
             2xl:mr-48 
           "
       >
-        <h2 className="scroll-m-20 text-4xl font-extrabold tracking-tight md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">
+        <h2
+          ref={ref}
+          data-in-view={inView}
+          className="
+            scroll-m-20 text-4xl font-extrabold tracking-tight opacity-0 data-in-view:animate-title-slide-left 
+            md:text-5xl
+            lg:text-6xl
+            xl:text-7xl
+            2xl:text-8xl
+          "
+        >
           Rejoindre <br /> l&apos;aventure
         </h2>
-        <p className="text-xl font-light leading-7 xl:text-2xl 2xl:text-3xl">
-          <Highlighter direction="left" inView>
+        <p
+          data-in-view={inView}
+          className="
+            text-xl font-light leading-7 opacity-0 data-in-view:animate-text-slide-down 
+            xl:text-2xl 
+            2xl:text-3xl
+          "
+        >
+          <Highlighter direction="left" inView={inView}>
             Vous avez des questions
           </Highlighter>
           des <br /> demandes ou un projet à nous
@@ -31,9 +55,10 @@ export function Join() {
         </p>
         <Link
           href="/contact"
+          data-in-view={inView}
           className={cn(
             buttonVariants({ variant: "gradiant", size: "xl" }),
-            "w-fit justify-self-center md:justify-self-end"
+            "w-fit justify-self-center opacity-0 data-in-view:animate-button-fade-in md:justify-self-end"
           )}
         >
           Contactez-nous

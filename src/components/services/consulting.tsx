@@ -1,21 +1,32 @@
+"use client";
+
 import Image from "next/image";
 import consulting_jpg from "@/images/services/consulting.jpg";
 import consulting_webp from "@/images/services/consulting.webp";
 import { Highlighter } from "../highlighter";
+import { useInView } from "react-intersection-observer";
 
 export function Consulting() {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+  });
+
   return (
     <section className="relative flex justify-center md:justify-start">
       <div
         className="
-            grid min-h-[calc(100vh-5rem)] grid-rows-[1fr_auto] gap-12 border border-red-500  py-24 text-center
+            grid min-h-[calc(100vh-5rem)] grid-rows-[1fr_auto] gap-12 py-24 text-center
             md:ml-24 md:grid-rows-none md:content-center md:gap-6 md:text-start 
             lg:ml-32
             xl:ml-40
             2xl:ml-48 
           "
       >
-        <div className="flex self-start md:self-auto">
+        <div
+          ref={ref}
+          data-in-view={inView}
+          className="flex self-start opacity-0 data-in-view:animate-title-slide-right md:self-auto"
+        >
           <div className="scroll-m-20 border p-6 text-xl font-extrabold tracking-tight md:text-3xl lg:text-4xl">
             04
           </div>
@@ -23,9 +34,12 @@ export function Consulting() {
             Consulting
           </h2>
         </div>
-        <p className="text-lg font-light leading-7 lg:text-xl xl:text-2xl">
+        <p
+          data-in-view={inView}
+          className="text-lg font-light leading-7 opacity-0 data-in-view:animate-text-slide-down lg:text-xl xl:text-2xl"
+        >
           Besoin d&apos;un&nbsp;
-          <Highlighter direction="right" inView>
+          <Highlighter direction="right" inView={inView}>
             avis extérieur
           </Highlighter>
           ? <br /> Le but est de vous donner une <br /> vision claire de votre
