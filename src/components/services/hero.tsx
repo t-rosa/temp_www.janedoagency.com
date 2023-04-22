@@ -40,7 +40,7 @@ export function Hero() {
       </div>
       <picture
         className="
-            pointer-events-none absolute inset-y-0 -z-10 w-full mix-blend-lighten 
+            pointer-events-none absolute inset-y-0 w-full mix-blend-lighten 
             md:right-0 md:-mb-5 md:w-[36rem] xl:w-[40rem] 2xl:w-[44rem]
           "
       >

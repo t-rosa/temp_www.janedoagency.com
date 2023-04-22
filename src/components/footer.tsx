@@ -21,7 +21,7 @@ export function Footer() {
         <ul>
           {SERVICES.map((item) => (
             <li key={item.label}>
-              <Link href={item.href} className="hover:text-accent">
+              <Link href={item.href} className="hover:text-gold">
                 {item.label}
               </Link>
             </li>
@@ -35,7 +35,7 @@ export function Footer() {
         <ul>
           {TERMS.map((item) => (
             <li key={item.label}>
-              <Link href={item.href} className="hover:text-accent">
+              <Link href={item.href} className="hover:text-gold">
                 {item.label}
               </Link>
             </li>

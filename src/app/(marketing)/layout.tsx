@@ -8,7 +8,9 @@ export default function RootLayout({ children }: PropsWithChildren) {
     <div className="relative">
       <RadialGradient />
       <Header />
-      <main className="min-h-[calc(100vh-5rem)] pt-20">{children}</main>
+      <main id="main" className="min-h-[calc(100vh-5rem)] pt-20">
+        {children}
+      </main>
       <Footer />
     </div>
   );

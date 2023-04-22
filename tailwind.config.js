@@ -71,14 +71,6 @@ module.exports = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: 0 },
         },
-        "slide-down": {
-          from: {
-            transform: "translateY(100%)",
-          },
-          to: {
-            transform: "translateY(0)",
-          },
-        },
         "left-to-right": {
           from: {
             top: 0,
@@ -111,14 +103,50 @@ module.exports = {
             transform: "skew(-12deg)",
           },
         },
+        "slide-down": {
+          from: {
+            transform: "translateY(100%)",
+          },
+          to: {
+            transform: "translateY(0)",
+          },
+        },
+        "text-slide-down": {
+          from: {
+            transform: "translateY(-100%)",
+            opacity: 0,
+          },
+          to: {
+            transform: "translateY(0)",
+            opacity: 1,
+          },
+        },
+        "title-slide-right": {
+          from: { transform: "translateX(-100%)", opacity: 0 },
+          to: { transform: "translateX(0)", opacity: 1 },
+        },
+        "title-slide-left": {
+          from: { transform: "translateX(100%)", opacity: 0 },
+          to: { transform: "translateX(0)", opacity: 1 },
+        },
+        "fade-in": {
+          from: { opacity: 0 },
+          to: { opacity: 1 },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "slide-down": "slide-down 1s ease-out forwards",
-        "spin-slow": "spin 10s linear infinite",
+
         "highlight-right": "left-to-right .5s ease-in-out 1.5s forwards",
-        "highlight-left": "right-to-left .5s ease-in-out 1.7s forwards",
+        "highlight-left": "right-to-left .5s ease-in-out 1.5s forwards",
+
+        "title-slide-right": "title-slide-right .5s ease-in-out .5s forwards",
+        "title-slide-left": "title-slide-left .5s ease-in-out .5s forwards",
+        "text-slide-down": "text-slide-down .5s ease-out 1s forwards",
+        "button-fade-in": "fade-in .5s ease-in-out 1.5s forwards",
+
+        "spin-slow": "spin 10s linear infinite",
       },
     },
   },

@@ -1,9 +1,9 @@
-import Image from "next/image";
+import { Highlighter } from "@/components/highlighter";
+import { buttonVariants } from "@/components/ui/button";
 import hero_jpg from "@/images/home/hero.jpg";
 import hero_webp from "@/images/home/hero.webp";
 import { cn } from "@/lib/utils";
-import { buttonVariants } from "@/components/ui/button";
-import { Highlighter } from "@/components/highlighter";
+import Image from "next/image";
 
 export function Hero() {
   return (
@@ -17,11 +17,11 @@ export function Hero() {
             2xl:ml-48 
           "
       >
-        <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">
+        <h1 className="-translate-x-full animate-title-slide-right scroll-m-20 text-4xl font-extrabold tracking-tight opacity-0 md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">
           Partagez <br />
           votre voix
         </h1>
-        <p className="text-xl font-light leading-7 xl:text-2xl 2xl:text-3xl">
+        <p className="-translate-y-full animate-text-slide-down text-xl font-light leading-7 opacity-0 xl:text-2xl 2xl:text-3xl">
           <Highlighter direction="right" inView={true}>
             Découvrez nos services
           </Highlighter>
@@ -32,7 +32,7 @@ export function Hero() {
           href="#discover"
           className={cn(
             buttonVariants({ variant: "gradiant", size: "xl" }),
-            "w-fit justify-self-center  md:justify-self-start"
+            "w-fit animate-button-fade-in justify-self-center opacity-0 md:justify-self-start"
           )}
         >
           Découvrir
@@ -40,8 +40,8 @@ export function Hero() {
       </div>
       <picture
         className="
-            pointer-events-none absolute inset-y-0 -z-10 w-full mix-blend-lighten
-            md:right-0 md:-mb-24 md:w-[36rem] lg:w-[44rem]
+            pointer-events-none absolute inset-y-0 z-10 w-full
+            mix-blend-lighten md:right-0 md:-mb-24 md:w-[36rem] lg:w-[44rem]
           "
       >
         <source srcSet={hero_webp.src} type="image/webp" />

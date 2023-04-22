@@ -41,7 +41,7 @@ export function Join() {
       </div>
       <picture
         className="
-            pointer-events-none absolute inset-y-0 -z-10 w-full mix-blend-lighten 
+            pointer-events-none absolute inset-y-0 w-full mix-blend-lighten 
             md:left-0 md:w-[30rem] xl:w-[34rem] 2xl:w-[38rem]
           "
       >

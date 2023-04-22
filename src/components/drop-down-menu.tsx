@@ -13,7 +13,7 @@ export function DropDownMenu(props: Props) {
   return (
     <nav
       data-open={props.open}
-      className="invisible fixed -top-full z-10 grid min-h-full w-full bg-black duration-500 data-open:visible data-open:translate-y-full data-open:delay-0 lg:grid-cols-[55%_45%] lg:delay-500"
+      className="invisible fixed -top-full z-20 grid min-h-full w-full bg-black duration-500 data-open:visible data-open:translate-y-full data-open:delay-0 lg:grid-cols-[55%_45%] lg:delay-500"
     >
       <ul className="mt-20 grid border-r border-foreground bg-black text-2xl xl:text-4xl">
         <li className="relative overflow-hidden border-b border-muted-foreground/50 ">
@@ -109,22 +109,24 @@ export function DropDownMenu(props: Props) {
       </ul>
       <aside
         data-open={props.open}
-        className="-z-10 hidden -translate-x-full duration-500 data-open:-translate-x-1/2 data-open:delay-500 lg:mt-20 lg:grid lg:place-items-center"
+        className="invisible -z-10 -translate-x-full duration-500 data-open:-translate-x-1/2 data-open:delay-500 lg:visible lg:mt-20 lg:grid lg:place-items-center"
       >
         <Image
           src={vinyl_png}
+          data-open={props.open}
           alt="Vinyl"
           fill
           priority
           placeholder="blur"
-          className="pointer-events-none z-50 hidden animate-spin-slow object-contain lg:block"
+          className="pointer-events-none invisible animate-spin-slow rounded-full object-contain lg:visible"
         />
         <Image
           src={props.currentVinylLabel}
+          data-open={props.open}
           alt="Vinyl Label"
           fill
           priority
-          className="pointer-events-none z-50 hidden animate-spin-slow object-contain lg:block"
+          className="pointer-events-none invisible animate-spin-slow rounded-full object-contain lg:visible"
         />
       </aside>
     </nav>

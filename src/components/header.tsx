@@ -43,7 +43,7 @@ export function Header() {
         pathname={pathname}
         currentVinylLabel={currentVinylLabel}
       />
-      <header className="fixed z-10 flex h-20 w-full items-center justify-between border-b bg-opacity-10 backdrop-blur-sm">
+      <header className="fixed z-20 flex h-20 w-full items-center justify-between border-b bg-opacity-10 backdrop-blur-sm">
         <nav className="flex w-full items-center justify-between">
           <Link
             onClick={close}

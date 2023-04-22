@@ -34,7 +34,7 @@ export function BrandValues() {
       </div>
       <picture
         className="
-            pointer-events-none absolute inset-y-0 -z-10 w-full overflow-x-hidden
+            pointer-events-none absolute inset-y-0 w-full overflow-x-hidden
             mix-blend-lighten md:left-0 md:w-[30rem] xl:w-[34rem] 2xl:w-[38rem]
           "
       >
