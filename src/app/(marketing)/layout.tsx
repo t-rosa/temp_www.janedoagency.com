@@ -8,6 +8,7 @@ import { PropsWithChildren, useState } from "react";
 import { SOCIALS } from "@/lib/socials";
 import { TERMS } from "@/lib/terms";
 import jane_do_svg from "@/images/jane-do.svg";
+import jane_do_text_svg from "@/images/jane-do-text.svg";
 import vinyl_png from "@/images/vinyl/vinyl.png";
 import currentVinylLabel from "@/images/vinyl/home.svg";
 import { RadialGradient } from "@/components/radial-gradient";
@@ -86,17 +87,24 @@ export default function RootLayout({ children }: PropsWithChildren) {
           />
         </aside>
       </nav>
-      <header className="fixed z-10 flex h-20 w-full items-center justify-between border-b">
+      <header className="fixed z-10 flex h-20 w-full items-center justify-between border-b bg-opacity-10 backdrop-blur-sm">
         <nav className="flex w-full items-center justify-between">
           <Link
+            onClick={close}
             href="/"
-            className="
-            ml-8 block h-16 w-16 rounded-full border-4
-            lg:ml-16
-            xl:ml-24
-            2xl:ml-32
-            "
-          />
+            className="flex items-center space-x-1 pl-4"
+          >
+            <Image
+              src={jane_do_svg}
+              alt="Pictrogramme"
+              className="transition-transform duration-500 hover:rotate-[360deg] hover:ease-in-out"
+            />
+            <Image
+              src={jane_do_text_svg}
+              alt="Jane Do"
+              className="hidden lg:block"
+            />
+          </Link>
           <ul
             data-is-open={isOpen}
             className="mr-16 hidden gap-6 text-xl data-[is-open='true']:hidden lg:flex xl:mr-24 2xl:mr-32"
@@ -151,7 +159,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
         "
       >
         <nav className="space-y-3">
-          <h2 className="scroll-m-20 border-b text-2xl font-semibold tracking-tight transition-colors first:mt-0">
+          <h2 className="w-fit scroll-m-20 border-b text-2xl font-semibold tracking-tight transition-colors first:mt-0">
             Services
           </h2>
           <ul>
