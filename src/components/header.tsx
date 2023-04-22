@@ -31,6 +31,10 @@ export function Header() {
     setOpen(false);
   }
 
+  function toggle() {
+    setOpen(!open);
+  }
+
   return (
     <>
       <DropDownMenu
@@ -62,44 +66,108 @@ export function Header() {
             className="mr-16 hidden gap-6 text-xl data-open:hidden lg:flex xl:mr-24 2xl:mr-32"
           >
             <li>
-              <Link href="/">
+              <Link href="/" className="[&:hover>#menu-label::before]:-right-1">
                 <div className="text-sm text-muted-foreground">01.</div>
-                <div>Accueil</div>
+                <div
+                  data-current={pathname === "/"}
+                  id="menu-label"
+                  className="
+                    relative inline-block before:absolute before:-inset-0 
+                    before:right-full before:-z-10 before:-skew-x-12 before:bg-gradient-to-r before:from-violet/50 before:to-rose/50
+                    before:duration-300 data-current:before:-right-1"
+                >
+                  Accueil
+                </div>
               </Link>
             </li>
             <li>
-              <Link href="/concept">
+              <Link
+                href="/concept"
+                className="[&:hover>#menu-label::before]:-right-1"
+              >
                 <div className="text-sm text-muted-foreground">02.</div>
-                <div>Concept</div>
+                <div
+                  data-current={pathname === "/concept"}
+                  id="menu-label"
+                  className="
+                    relative inline-block before:absolute before:-inset-0 
+                    before:right-full before:-z-10 before:-skew-x-12 before:bg-gradient-to-r before:from-violet/50 before:to-rose/50
+                    before:duration-300 data-current:before:-right-1"
+                >
+                  Concept
+                </div>
               </Link>
             </li>
             <li>
-              <Link href="/services">
+              <Link
+                href="/services"
+                className="[&:hover>#menu-label::before]:-right-1"
+              >
                 <div className="text-sm text-muted-foreground">03.</div>
-                <div>Services</div>
+                <div
+                  data-current={pathname === "/services"}
+                  id="menu-label"
+                  className="
+                    relative inline-block before:absolute before:-inset-0 
+                    before:right-full before:-z-10 before:-skew-x-12 before:bg-gradient-to-r before:from-violet/50 before:to-rose/50
+                    before:duration-300 data-current:before:-right-1"
+                >
+                  Services
+                </div>
               </Link>
             </li>
             <li>
-              <Link href="/news">
+              <Link
+                href="/news"
+                className="[&:hover>#menu-label::before]:-right-1"
+              >
                 <div className="text-sm text-muted-foreground">04.</div>
-                <div>News</div>
+                <div
+                  data-current={pathname === "/news"}
+                  id="menu-label"
+                  className="
+                    relative inline-block before:absolute before:-inset-0 
+                    before:right-full before:-z-10 before:-skew-x-12 before:bg-gradient-to-r before:from-violet/50 before:to-rose/50
+                    before:duration-300 data-current:before:-right-1"
+                >
+                  News
+                </div>
               </Link>
             </li>
             <li>
-              <Link href="/contact">
+              <Link
+                href="/contact"
+                className="[&:hover>#menu-label::before]:-right-1"
+              >
                 <div className="text-sm text-muted-foreground">05.</div>
-                <div>Contact</div>
+                <div
+                  data-current={pathname === "/contact"}
+                  id="menu-label"
+                  className="
+                    relative inline-block before:absolute before:-inset-0 
+                    before:right-full before:-z-10 before:-skew-x-12 before:bg-gradient-to-r before:from-violet/50 before:to-rose/50
+                    before:duration-300 data-current:before:-right-1"
+                >
+                  Contact
+                </div>
               </Link>
             </li>
           </ul>
         </nav>
         <Button
           variant="ghost"
-          className="grid h-full rounded-none border-l hover:bg-none"
-          onClick={() => setOpen(!open)}
+          className="flex h-full w-44 flex-col gap-3 rounded-none border-l"
+          aria-label="Ouvrir le menu"
+          onClick={toggle}
         >
-          <div className="col-span-full row-span-full h-px w-24 -translate-y-2 bg-primary" />
-          <div className="col-span-full row-span-full h-px w-24 translate-y-2 bg-primary" />
+          <div
+            data-open={open}
+            className="h-px w-28 bg-foreground duration-300 data-open:translate-y-5"
+          />
+          <div
+            data-open={open}
+            className="h-px w-28 bg-foreground duration-300 data-open:-translate-y-5"
+          />
         </Button>
       </header>
     </>
