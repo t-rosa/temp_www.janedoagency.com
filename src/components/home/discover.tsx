@@ -6,7 +6,7 @@ export function Discover() {
   return (
     <section
       id="discover"
-      className="relative flex justify-center border md:justify-end"
+      className="relative flex justify-center md:justify-end"
     >
       <div
         className="

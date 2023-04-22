@@ -1,80 +1,130 @@
-import currentVinylLabel from "@/images/vinyl/home.svg";
 import vinyl_png from "@/images/vinyl/vinyl.png";
 import Image from "next/image";
 import Link from "next/link";
 
 interface Props {
-  isOpen: boolean;
+  open: boolean;
+  close: () => void;
+  pathname: string;
+  currentVinylLabel: any;
 }
 
 export function DropDownMenu(props: Props) {
   return (
     <nav
-      data-is-open={props.isOpen}
-      className="fixed z-10 grid h-full w-full translate-y-full bg-black data-[is-open='true']:translate-y-0 lg:grid-cols-[55%_45%]"
+      data-open={props.open}
+      className="invisible fixed -top-full z-10 grid min-h-full w-full bg-black duration-500 data-open:visible data-open:translate-y-full data-open:delay-0 lg:grid-cols-[55%_45%] lg:delay-500"
     >
-      <ul className="mt-20 grid border-4 border-blue-500 bg-black text-2xl">
-        <li>
+      <ul className="mt-20 grid border-r border-foreground bg-black text-2xl xl:text-4xl">
+        <li className="relative overflow-hidden border-b border-muted-foreground/50 ">
           <Link
             href="/"
-            className="flex h-full w-full items-center justify-center gap-3 border-b border-muted-foreground lg:justify-start lg:pl-16 xl:pl-24 2xl:pl-32"
+            onClick={props.close}
+            data-current={props.pathname === "/"}
+            className="
+              flex h-full w-full items-center justify-center gap-3
+              before:absolute before:-inset-0 before:right-full before:z-10 before:-translate-x-5
+              before:-skew-x-12 before:bg-gradient-to-r before:from-violet/50 before:to-rose/50 before:duration-500 hover:before:-right-12 data-current:before:-right-12
+              lg:justify-start lg:pl-16 
+              xl:pl-24 
+              2xl:pl-32
+            "
           >
-            <div className="text-sm text-muted-foreground">01.</div>
-            <div>Accueil</div>
+            <div className="z-10 text-sm text-muted-foreground">01.</div>
+            <div className="z-10">Accueil</div>
           </Link>
         </li>
-        <li>
+        <li className="relative overflow-hidden border-b border-muted-foreground/50">
           <Link
             href="/concept"
-            className="flex h-full w-full items-center justify-center gap-3 border-b border-muted-foreground lg:justify-start lg:pl-16 xl:pl-24 2xl:pl-32"
+            onClick={props.close}
+            data-current={props.pathname === "/concept"}
+            className="
+              flex h-full w-full items-center justify-center gap-3
+              before:absolute before:-inset-0 before:right-full before:z-10 before:-translate-x-5
+              before:-skew-x-12 before:bg-gradient-to-r before:from-violet/50 before:to-rose/50 before:duration-500 hover:before:-right-12 data-current:before:-right-12
+              lg:justify-start lg:pl-16 
+              xl:pl-24 
+              2xl:pl-32
+            "
           >
-            <div className="text-sm text-muted-foreground">02.</div>
-            <div>Concept</div>
+            <div className="z-10 text-sm text-muted-foreground">02.</div>
+            <div className="z-10">Concept</div>
           </Link>
         </li>
-        <li>
+        <li className="relative overflow-hidden border-b border-muted-foreground/50">
           <Link
             href="/services"
-            className="flex h-full w-full items-center justify-center gap-3 border-b border-muted-foreground lg:justify-start lg:pl-16 xl:pl-24 2xl:pl-32"
+            onClick={props.close}
+            data-current={props.pathname === "/services"}
+            className="
+              flex h-full w-full items-center justify-center gap-3
+              before:absolute before:-inset-0 before:right-full before:z-10 before:-translate-x-5
+              before:-skew-x-12 before:bg-gradient-to-r before:from-violet/50 before:to-rose/50 before:duration-500 hover:before:-right-12 data-current:before:-right-12
+              lg:justify-start lg:pl-16 
+              xl:pl-24 
+              2xl:pl-32
+            "
           >
-            <div className="text-sm text-muted-foreground">03.</div>
-            <div>Services</div>
+            <div className="z-10 text-sm text-muted-foreground">03.</div>
+            <div className="z-10">Services</div>
           </Link>
         </li>
-        <li>
+        <li className="relative overflow-hidden border-b border-muted-foreground/50">
           <Link
             href="/news"
-            className="flex h-full w-full items-center justify-center gap-3 border-b border-muted-foreground lg:justify-start lg:pl-16 xl:pl-24 2xl:pl-32"
+            onClick={props.close}
+            data-current={props.pathname === "/news"}
+            className="
+              flex h-full w-full items-center justify-center gap-3
+              before:absolute before:-inset-0 before:right-full before:z-10 before:-translate-x-5
+              before:-skew-x-12 before:bg-gradient-to-r before:from-violet/50 before:to-rose/50 before:duration-500 hover:before:-right-12 data-current:before:-right-12
+              lg:justify-start lg:pl-16 
+              xl:pl-24 
+              2xl:pl-32
+            "
           >
-            <div className="text-sm text-muted-foreground">04.</div>
-            <div>News</div>
+            <div className="z-10 text-sm text-muted-foreground">04.</div>
+            <div className="z-10">News</div>
           </Link>
         </li>
-        <li>
+        <li className="relative overflow-hidden">
           <Link
             href="/contact"
-            className="flex h-full w-full items-center justify-center gap-3 lg:justify-start lg:pl-16 xl:pl-24 2xl:pl-32"
+            onClick={props.close}
+            data-current={props.pathname === "/contact"}
+            className="
+              flex h-full w-full items-center justify-center gap-3 border-b border-muted-foreground/50 
+              before:absolute before:-inset-0 before:right-full before:z-10 before:-translate-x-5
+              before:-skew-x-12 before:bg-gradient-to-r before:from-violet/50 before:to-rose/50 before:duration-500 hover:before:-right-12 data-current:before:-right-12
+              lg:justify-start lg:pl-16 
+              xl:pl-24 
+              2xl:pl-32
+            "
           >
-            <div className="text-sm text-muted-foreground">05.</div>
-            <div>Contact</div>
+            <div className="z-10 text-sm text-muted-foreground">05.</div>
+            <div className="z-10">Contact</div>
           </Link>
         </li>
       </ul>
-      <aside className="-z-10 hidden -translate-x-1/2 lg:mt-20 lg:grid lg:place-items-center lg:border-4 lg:border-green-500">
+      <aside
+        data-open={props.open}
+        className="-z-10 hidden -translate-x-full duration-500 data-open:-translate-x-1/2 data-open:delay-500 lg:mt-20 lg:grid lg:place-items-center"
+      >
         <Image
           src={vinyl_png}
           alt="Vinyl"
           fill
           priority
           placeholder="blur"
-          className="animate-spin-service pointer-events-none z-50 hidden object-contain lg:block"
+          className="pointer-events-none z-50 hidden animate-spin-slow object-contain lg:block"
         />
         <Image
-          src={currentVinylLabel}
+          src={props.currentVinylLabel}
           alt="Vinyl Label"
           fill
           priority
-          className="animate-spin-service pointer-events-none z-50 hidden object-contain lg:block"
+          className="pointer-events-none z-50 hidden animate-spin-slow object-contain lg:block"
         />
       </aside>
     </nav>

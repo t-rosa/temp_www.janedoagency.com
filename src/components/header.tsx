@@ -6,20 +6,45 @@ import jane_do_text_svg from "@/images/jane-do-text.svg";
 import jane_do_svg from "@/images/jane-do.svg";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
+import { MENU } from "@/lib/menu";
 
 export function Header() {
-  const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+  const [open, setOpen] = useState(false);
+  const [currentVinylLabel, setCurrentVinylLabel] = useState(
+    MENU[0].vinylLabel
+  );
+
+  useEffect(() => {
+    MENU.forEach((item) => {
+      if (item.href === pathname) {
+        setTimeout(() => {
+          setCurrentVinylLabel(item.vinylLabel);
+        }, 500);
+      }
+    });
+  }, [pathname]);
+
+  function close() {
+    setOpen(false);
+  }
 
   return (
     <>
-      <DropDownMenu isOpen={isOpen} />
+      <DropDownMenu
+        open={open}
+        close={close}
+        pathname={pathname}
+        currentVinylLabel={currentVinylLabel}
+      />
       <header className="fixed z-10 flex h-20 w-full items-center justify-between border-b bg-opacity-10 backdrop-blur-sm">
         <nav className="flex w-full items-center justify-between">
           <Link
             onClick={close}
             href="/"
-            className="flex items-center space-x-1 pl-4"
+            className="ml-8 flex items-center space-x-1 lg:ml-16 xl:ml-24 2xl:ml-32"
           >
             <Image
               src={jane_do_svg}
@@ -33,8 +58,8 @@ export function Header() {
             />
           </Link>
           <ul
-            data-is-open={isOpen}
-            className="mr-16 hidden gap-6 text-xl data-[is-open='true']:hidden lg:flex xl:mr-24 2xl:mr-32"
+            data-open={open}
+            className="mr-16 hidden gap-6 text-xl data-open:hidden lg:flex xl:mr-24 2xl:mr-32"
           >
             <li>
               <Link href="/">
@@ -71,7 +96,7 @@ export function Header() {
         <Button
           variant="ghost"
           className="grid h-full rounded-none border-l hover:bg-none"
-          onClick={() => setIsOpen(!isOpen)}
+          onClick={() => setOpen(!open)}
         >
           <div className="col-span-full row-span-full h-px w-24 -translate-y-2 bg-primary" />
           <div className="col-span-full row-span-full h-px w-24 translate-y-2 bg-primary" />

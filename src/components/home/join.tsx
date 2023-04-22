@@ -7,7 +7,7 @@ import join_webp from "@/images/home/join.webp";
 
 export function Join() {
   return (
-    <section className="relative flex justify-center border md:justify-start">
+    <section className="relative flex justify-center md:justify-start">
       <div
         className="
             grid min-h-[calc(100vh-5rem)] grid-rows-[1fr_auto_auto] gap-12 border border-red-500 py-24 text-center

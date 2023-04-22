@@ -10,6 +10,10 @@ module.exports = {
         "2xl": "1400px",
       },
     },
+    data: {
+      open: 'open~="true"',
+      current: 'current~="true"',
+    },
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -65,10 +69,20 @@ module.exports = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: 0 },
         },
+        "slide-down": {
+          from: {
+            transform: "translateY(100%)",
+          },
+          to: {
+            transform: "translateY(0)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "slide-down": "slide-down 1s ease-out forwards",
+        "spin-slow": "spin 10s linear infinite",
       },
     },
   },
