@@ -4,7 +4,7 @@ const nextConfig = {
     appDir: true,
     optimizeCss: true,
     scrollRestoration: true,
-    typedRoutes: true,
+    // typedRoutes: true,
   },
   images: {
     remotePatterns: [

@@ -14,7 +14,7 @@ export function Footer() {
           md:grid md:place-items-center md:text-start
         "
     >
-      <nav className="space-y-3">
+      <nav className="flex flex-col items-center space-y-3 md:items-start">
         <h2 className="w-fit scroll-m-20 border-b text-2xl font-semibold tracking-tight transition-colors first:mt-0">
           Services
         </h2>
@@ -28,7 +28,7 @@ export function Footer() {
           ))}
         </ul>
       </nav>
-      <nav className="space-y-3 md:self-start">
+      <nav className="flex flex-col items-center space-y-3 md:items-start md:self-start">
         <h2 className="scroll-m-20 border-b text-2xl font-semibold tracking-tight transition-colors first:mt-0">
           Conditions générales
         </h2>
