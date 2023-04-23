@@ -30,7 +30,9 @@ export function DropDownMenu(props: Props) {
               2xl:pl-32
             "
           >
-            <div className="z-10 text-sm text-muted-foreground">01.</div>
+            <div className="z-10 border-b text-sm font-light text-muted-foreground">
+              01.
+            </div>
             <div className="z-10">Accueil</div>
           </Link>
         </li>
@@ -48,7 +50,9 @@ export function DropDownMenu(props: Props) {
               2xl:pl-32
             "
           >
-            <div className="z-10 text-sm text-muted-foreground">02.</div>
+            <div className="z-10 border-b text-sm font-light text-muted-foreground">
+              02.
+            </div>
             <div className="z-10">Concept</div>
           </Link>
         </li>
@@ -66,7 +70,9 @@ export function DropDownMenu(props: Props) {
               2xl:pl-32
             "
           >
-            <div className="z-10 text-sm text-muted-foreground">03.</div>
+            <div className="z-10 border-b text-sm font-light text-muted-foreground">
+              03.
+            </div>
             <div className="z-10">Services</div>
           </Link>
         </li>
@@ -84,7 +90,9 @@ export function DropDownMenu(props: Props) {
               2xl:pl-32
             "
           >
-            <div className="z-10 text-sm text-muted-foreground">04.</div>
+            <div className="z-10 border-b text-sm font-light text-muted-foreground">
+              04.
+            </div>
             <div className="z-10">News</div>
           </Link>
         </li>
@@ -102,7 +110,9 @@ export function DropDownMenu(props: Props) {
               2xl:pl-32
             "
           >
-            <div className="z-10 text-sm text-muted-foreground">05.</div>
+            <div className="z-10 border-b text-sm font-light text-muted-foreground">
+              05.
+            </div>
             <div className="z-10">Contact</div>
           </Link>
         </li>

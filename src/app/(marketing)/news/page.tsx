@@ -59,10 +59,8 @@ export default async function NewsPage() {
               </div>
             </div>
             <h3 className="mt-3 text-lg font-semibold leading-6 text-white">
-              <a href={article.href}>
-                <span className="absolute inset-0" />
-                {article.title}
-              </a>
+              <span className="absolute inset-0" />
+              {article.title}
             </h3>
           </Link>
         ))}

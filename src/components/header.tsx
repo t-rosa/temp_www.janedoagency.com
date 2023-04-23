@@ -67,7 +67,7 @@ export function Header() {
           >
             <li>
               <Link href="/" className="[&:hover>#menu-label::before]:-right-1">
-                <div className="text-sm text-muted-foreground">01.</div>
+                <div className="text-sm font-light text-foreground">01.</div>
                 <div
                   data-current={pathname === "/"}
                   id="menu-label"
@@ -85,7 +85,7 @@ export function Header() {
                 href="/concept"
                 className="[&:hover>#menu-label::before]:-right-1"
               >
-                <div className="text-sm text-muted-foreground">02.</div>
+                <div className="text-sm font-light text-foreground">02.</div>
                 <div
                   data-current={pathname === "/concept"}
                   id="menu-label"
@@ -103,7 +103,7 @@ export function Header() {
                 href="/services"
                 className="[&:hover>#menu-label::before]:-right-1"
               >
-                <div className="text-sm text-muted-foreground">03.</div>
+                <div className="text-sm font-light text-foreground">03.</div>
                 <div
                   data-current={pathname === "/services"}
                   id="menu-label"
@@ -121,7 +121,7 @@ export function Header() {
                 href="/news"
                 className="[&:hover>#menu-label::before]:-right-1"
               >
-                <div className="text-sm text-muted-foreground">04.</div>
+                <div className="text-sm font-light text-foreground">04.</div>
                 <div
                   data-current={pathname === "/news"}
                   id="menu-label"
@@ -139,7 +139,7 @@ export function Header() {
                 href="/contact"
                 className="[&:hover>#menu-label::before]:-right-1"
               >
-                <div className="text-sm text-muted-foreground">05.</div>
+                <div className="text-sm font-light text-foreground">05.</div>
                 <div
                   data-current={pathname === "/contact"}
                   id="menu-label"
