@@ -1,7 +1,7 @@
 import Date from "@/components/ui/date";
 import client from "@/lib/sanity/sanity.client";
 import { urlForImage } from "@/lib/sanity/sanity.image";
-import { groq } from "next-sanity";
+import { getArticles } from "@/lib/sanity/sanity.queries";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -10,17 +10,7 @@ export const metadata = {
 };
 
 export default async function NewsPage() {
-  const articles = await client!.fetch(
-    groq`*[_type=="article" && defined(slug.current)] | order(date desc) {
-      _id,
-      name,
-      title,
-      date,
-      coverImage,
-      "slug": slug.current,
-      "author": author->{name, image},
-    }`
-  );
+  const articles = await client!.fetch(getArticles);
 
   return (
     <section>

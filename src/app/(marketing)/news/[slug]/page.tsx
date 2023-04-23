@@ -3,32 +3,20 @@
 import Date from "@/components/ui/date";
 import client from "@/lib/sanity/sanity.client";
 import { urlForImage } from "@/lib/sanity/sanity.image";
-import type { Article } from "@/lib/sanity/sanity.queries";
+import {
+  Article,
+  getArticle,
+  getArticleByDate,
+} from "@/lib/sanity/sanity.queries";
 import { PortableText } from "@portabletext/react";
 import { FileAudio } from "lucide-react";
-import { groq } from "next-sanity";
 import Image from "next/image";
 import Balancer from "react-wrap-balancer";
 
 export default async function Article({ params }: { params: any }) {
-  const article = await client!.fetch(
-    groq`*[_type=="article" && slug.current==$slug][0] {
-      _id,
-      title,
-      content,
-      coverImage,
-      audio {
-        asset->{
-          url
-        }
-      },
-      date,
-      "slug":slug.current
-    }`,
-    {
-      slug: params.slug,
-    }
-  );
+  const article = await client!.fetch(getArticle, {
+    slug: params.slug,
+  });
 
   return (
     <article className="relative mx-auto max-w-4xl px-8 py-24">
@@ -68,22 +56,7 @@ export default async function Article({ params }: { params: any }) {
 }
 
 export async function generateStaticParams() {
-  const articles = await client!.fetch(
-    groq`*[_type=="article" && defined(slug.current)] | order(date desc) {
-      _id,
-      name,
-      title,
-      audio {
-        asset->{
-          url
-        }
-      },
-      date,
-      coverImage,
-      "slug": slug.current,
-      "author": author->{name, image},
-    }`
-  );
+  const articles = await client!.fetch(getArticleByDate);
 
   return articles.map((article: Article) => ({ slug: article.slug }));
 }
