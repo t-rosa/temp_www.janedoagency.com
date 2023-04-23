@@ -18,7 +18,7 @@ export function Question6(props: Props) {
         </div>
         <Label htmlFor="question-6" className="text-4xl font-semibold">
           Sur quels réseaux es-tu déjà présent ?
-          <span className="text-accent">*</span>
+          <span className="text-gold">*</span>
         </Label>
       </div>
       <Input

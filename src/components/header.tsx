@@ -156,7 +156,7 @@ export function Header() {
         </nav>
         <Button
           variant="ghost"
-          className="flex h-full w-44 flex-col gap-3 rounded-none border-l"
+          className="flex h-full w-44 flex-col gap-3 rounded-none border-l active:scale-100"
           aria-label="Ouvrir le menu"
           onClick={toggle}
         >
