@@ -18,7 +18,7 @@ export function Question5(props: Props) {
         </div>
         <Label htmlFor="question-5" className="text-4xl font-semibold">
           Quels sont les artistes avec un univers similaire au tien ?
-          <span className="text-accent">*</span>
+          <span className="text-gold">*</span>
         </Label>
       </div>
       <Input

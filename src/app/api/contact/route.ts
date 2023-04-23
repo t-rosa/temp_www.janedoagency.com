@@ -54,7 +54,7 @@ export async function POST(request: Request) {
     `;
 
   const mailData = {
-    to: "toma.rosa@protonmail.com",
+    to: process.env.MAIL_TO,
     subject: `Prise de contact`,
     html,
   };

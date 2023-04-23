@@ -17,7 +17,7 @@ export function Question8(props: Props) {
           08.
         </div>
         <Label htmlFor="question-7" className="text-4xl font-semibold">
-          Pour finir, ton adresse e-mail ?<span className="text-accent">*</span>
+          Pour finir, ton adresse e-mail ?<span className="text-gold">*</span>
         </Label>
       </div>
       <Input
