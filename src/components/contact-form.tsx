@@ -1,7 +1,5 @@
 "use client";
 
-import { useMultiStepForm } from "@/hooks/use-multi-step-form";
-import { useState, FormEvent } from "react";
 import { Question1 } from "@/components/questions/question-1";
 import { Question2 } from "@/components/questions/question-2";
 import { Question3 } from "@/components/questions/question-3";
@@ -9,10 +7,15 @@ import { Question4 } from "@/components/questions/question-4";
 import { Question5 } from "@/components/questions/question-5";
 import { Question6 } from "@/components/questions/question-6";
 import { Question7 } from "@/components/questions/question-7";
+import { Question8 } from "@/components/questions/question-8";
 import { Button } from "@/components/ui/button";
-import { ChevronLast, ChevronLeft } from "lucide-react";
+import { useMultiStepForm } from "@/hooks/use-multi-step-form";
+import { ChevronLast, ChevronLeft, Loader2 } from "lucide-react";
+import { FormEvent, useState } from "react";
+import { useRouter } from "next/navigation";
+import { useToast } from "@/hooks/use-toast";
 
-type FormData = {
+export interface ContactFormData {
   question1: string;
   question2: string;
   question3: string;
@@ -20,9 +23,10 @@ type FormData = {
   question5: string;
   question6: string;
   question7: string;
-};
+  email: string;
+}
 
-const INITIAL_DATA: FormData = {
+const INITIAL_DATA: ContactFormData = {
   question1: "",
   question2: "",
   question3: "",
@@ -30,11 +34,16 @@ const INITIAL_DATA: FormData = {
   question5: "",
   question6: "",
   question7: "",
+  email: "",
 };
 
 export function ContactForm() {
   const [data, setData] = useState(INITIAL_DATA);
-  function updateFields(fields: Partial<FormData>) {
+  const [loading, setLoading] = useState(false);
+  const router = useRouter();
+  const { toast } = useToast();
+
+  function updateFields(fields: Partial<ContactFormData>) {
     setData((prev) => {
       return { ...prev, ...fields };
     });
@@ -47,12 +56,14 @@ export function ContactForm() {
     <Question5 key={4} {...data} updateFields={updateFields} />,
     <Question6 key={5} {...data} updateFields={updateFields} />,
     <Question7 key={6} {...data} updateFields={updateFields} />,
+    <Question8 key={7} {...data} updateFields={updateFields} />,
   ]);
 
   async function onSubmit(e: FormEvent) {
     e.preventDefault();
     if (!isLastStep) return next();
     try {
+      setLoading(true);
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
@@ -62,15 +73,24 @@ export function ContactForm() {
       });
 
       if (response.ok) {
-        console.log("Email envoyé avec succès.");
+        setLoading(false);
+        toast({
+          title: "Email envoyé avec succès",
+        });
+        router.push("/");
       } else {
-        console.error(
-          "Erreur lors de l'envoi de l'email:",
-          response.statusText
-        );
+        setLoading(false);
+        toast({
+          title: "Erreur lors de l'envoi de l'email:",
+          variant: "destructive",
+        });
       }
     } catch (e) {
-      console.error("Erreur! lors de l'envoi de l'email:", e);
+      setLoading(false);
+      toast({
+        title: "Erreur lors de l'envoi de l'email:",
+        variant: "destructive",
+      });
     }
   }
 
@@ -81,6 +101,7 @@ export function ContactForm() {
         type="submit"
         className="flex gap-3 self-start rounded-none border border-foreground py-7 text-xl font-medium hover:border-gold hover:bg-zinc-800 hover:text-foreground"
       >
+        {loading && <Loader2 className="animate-spin" />}
         {isLastStep ? "Terminer" : "Suivant"} <ChevronLast />
       </Button>
       <div>
@@ -94,7 +115,6 @@ export function ContactForm() {
             <ChevronLeft /> Retour
           </Button>
         )}
-        <button type="submit"></button>
       </div>
     </form>
   );
