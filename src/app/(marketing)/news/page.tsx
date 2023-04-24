@@ -1,7 +1,7 @@
 import Date from "@/components/ui/date";
 import client from "@/lib/sanity/sanity.client";
 import { urlForImage } from "@/lib/sanity/sanity.image";
-import { getArticles } from "@/lib/sanity/sanity.queries";
+import { Article, getArticles } from "@/lib/sanity/sanity.queries";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -19,7 +19,7 @@ export default async function NewsPage() {
       </h1>
       <div className="mx-auto grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 px-8 pb-24 lg:max-w-none lg:grid-cols-3 lg:px-16 xl:px-32">
         {articles.map((article: any) => (
-          <Link
+          <a
             key={article.slug}
             href={`/news/${article.slug}`}
             className="relative isolate flex flex-col justify-end overflow-hidden border border-zinc-700 bg-zinc-900 px-8 pb-8 pt-80 hover:border-gold hover:duration-200 sm:pt-48 lg:pt-80"
@@ -62,7 +62,7 @@ export default async function NewsPage() {
               <span className="absolute inset-0" />
               {article.title}
             </h3>
-          </Link>
+          </a>
         ))}
       </div>
     </section>
