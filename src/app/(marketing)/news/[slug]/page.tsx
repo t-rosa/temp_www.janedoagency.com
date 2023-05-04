@@ -1,22 +1,17 @@
-"use client";
-
+import { ArticleContent } from "@/components/article-content";
 import Date from "@/components/ui/date";
-import client from "@/lib/sanity/sanity.client";
 import { urlForImage } from "@/lib/sanity/sanity.image";
 import {
   Article,
-  getArticle,
-  getArticleByDate,
+  fetchArticle,
+  fetchArticleByDate,
 } from "@/lib/sanity/sanity.queries";
-import { PortableText } from "@portabletext/react";
 import { FileAudio } from "lucide-react";
 import Image from "next/image";
 import Balancer from "react-wrap-balancer";
 
 export default async function Article({ params }: { params: any }) {
-  const article = await client!.fetch(getArticle, {
-    slug: params.slug,
-  });
+  const article: any = await fetchArticle(params.slug);
 
   return (
     <article className="relative mx-auto max-w-4xl px-8 py-24">
@@ -48,15 +43,13 @@ export default async function Article({ params }: { params: any }) {
           </audio>
         </div>
       )}
-      <div className={`prose prose-invert mx-auto max-w-4xl lg:prose-xl`}>
-        <PortableText value={article.content} />
-      </div>
+      <ArticleContent content={article.content} />
     </article>
   );
 }
 
 export async function generateStaticParams() {
-  const articles = await client!.fetch(getArticleByDate);
+  const articles = await fetchArticleByDate();
 
   return articles.map((article: Article) => ({ slug: article.slug }));
 }
